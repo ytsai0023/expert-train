@@ -1,0 +1,65 @@
+.experience-content{
+    padding-left: 24px;
+    margin:22px 0 72px 24px;
+    border-left:1px solid #96A9C4;
+ 
+}
+
+.experience-content h1{
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    
+}
+
+.hex-logo{
+    display: block;
+    background:url(img/Group-1.svg);
+    height:67px;
+    width:90px;
+    background-repeat: no-repeat;
+    margin-bottom: 8.15px;
+}
+
+.hex-logo+p{
+    font-size: 20px;
+    line-height: 30px;
+    width: 750px;
+    margin-bottom: 32px;
+    font-weight: 300;
+
+}
+
+.experience-list{
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 800;
+  
+
+}
+
+.experience-list li{
+    margin-bottom: 32px;
+}
+
+.experience-list li:last-of-type{
+    margin-bottom: 0;
+}
+
+.tree-log{
+    margin:8px 0 8px 0;
+}
+
+.tree-log img{
+    height: 73px;
+    width: 73px;
+}
+
+.experience-list li:last-of-type p:last-of-type{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+

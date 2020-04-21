@@ -1,0 +1,174 @@
+@import url("skills.css");
+@import url("experience.css");
+@import url("footer.css");
+
+*,
+*::before,
+*::after{
+    box-sizing:inherit;
+}
+
+
+html{
+    box-sizing:border-box;
+
+}
+
+body {
+  
+}
+
+.container{
+    width:1200px;
+    margin: 0 auto;
+}
+
+.banner{
+    background-color:yellow;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid #000000;
+    font-size: 80px;
+    font-family: 'Regular 80px/90px Andale Mono;';
+    letter-spacing: 0px;
+    
+}
+
+.banner-text{
+    width:280px;
+    height: 180px;
+    border:1px solid #7d7d7d;
+    margin-bottom: 24px;
+    line-height: 90px;
+}
+
+.header{
+    height: 324px;
+    margin-bottom: 48px;
+}
+
+.header img{
+   width: 324px;
+   height: 324px;
+}
+
+.profile{
+    height: 100%;
+    position: relative;
+    margin-bottom: 72px;
+}
+
+.list-group-title{
+
+    font-size: 32px;
+    line-height: 45px;
+    font-weight: bolder;
+    /* border:1px solid #7d7d7d   */
+}
+
+.list-group-title span{
+    margin-left: 16px;
+    font-size: 24px;
+    font-weight: bolder;
+    color:#A00404;
+}
+
+.list-group-title + hr{
+    border:1px solid #000;
+    margin-bottom: 16px;
+}
+
+.profile-title{
+  
+    /* margin-bottom: 8px;
+    font-size: 32px;
+    line-height: 45px;
+    font-weight: bolder;   */
+}
+
+.profile-title span{
+    /* margin-left: 16px;
+    font-size: 24px;
+    font-weight: bolder;
+    color:#A00404; */
+} 
+/* 
+.profile hr,.education hr{
+    border:1px solid #000;
+    margin-bottom: 16px;
+} */
+
+
+
+
+.profile-content{
+
+   
+}
+
+.profile-content ul,.education ul{
+    display: block;
+   
+    margin-left: 48px;
+} 
+.profile-content ul{
+    width: 438px;
+}
+
+.list-li-style li{
+    display: block;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.profile-content li{
+    
+    width: 700px;
+    height: 105px;
+    margin-bottom: 24px;
+    
+} 
+
+
+/* .profile-content p{ */
+    /* content:' '; */
+.decoration{  
+    position: absolute;
+    left:16px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background-color: #96A9c4;
+    display:inline-block;
+    width: 16px;
+    height: 16px;
+    
+}
+
+.education-content div{
+    display: table;
+    position: relative;
+    width:50px;
+    border:1px solid #7d7d7d;
+}
+
+.education-content li{
+    margin-bottom: 32px;
+    
+}
+
+.education-content p.decoration:last-of-type{
+    top:68px;
+    
+}
+
+.education-content p.decoration:first-of-type{
+    height: 68px;
+    width: 0px;
+    border-left: 3px solid #96A9c4;
+    position: absolute;
+    top:8px;
+    left:22px;
+    z-index: -1;
+}
+
+
