@@ -7,18 +7,23 @@
 
 }
 
-.footer p.contact-title span{
-    color:#fff;
+.footer p.contact-title{
+    margin-bottom: 8px;
 }
 
-.footer p.contact-title + hr{
+.footer p.contact-title span{
+    color:#fff;
+    font-family: Robot,Arial, Helvetica, sans-serif;
+    font-weight: 200;
+
+}
+
+.footer p.contact-title + .hr{
     width: 1200px;
-    display: block; 
-    height: 1px;
-    border:0;
-    border-top: 0.3px solid #fff;
-    margin: 0 auto;
-    padding: 0;
+    height: 2px;
+    display: block;
+    border-top: 1px solid #fff;
+    margin:0 auto;
     margin-bottom: 32px;
 }
 
@@ -30,6 +35,10 @@
 }
 .footer+ul>li:last-child{
     margin-bottom: 0;
+}
+.footer+ul>li:last-child{ 
+   font-weight: 300;
+
 }
 .sns-logos{
     height: 48px;
