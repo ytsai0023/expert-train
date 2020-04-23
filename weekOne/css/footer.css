@@ -54,20 +54,21 @@
 
 
 
-.sns-logos div{ 
+.sns-logos a{ 
     display:block;
     background-repeat:no-repeat;
     width: 48px;
     height: 48px;
+    cursor: pointer;
 }
 .sns-logos .facebook{
-    background:url(img/facebook.svg);
+    background:url("../img/facebook.svg");
 }
 
 .sns-logos .intagram{
-    background:url(img/instagram-alt.svg);
+    background:url("../img/instagram-alt.svg");
 }
 
 .sns-logos .line{
-    background:url(img/line.svg);
+    background:url("../img/line.svg");
 }
