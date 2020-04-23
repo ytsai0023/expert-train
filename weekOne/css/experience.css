@@ -15,7 +15,7 @@
 
 .hex-logo{
     display: block;
-    background:url(img/Group-1.svg);
+    background:url("../img/Group-1.svg");
     height:67px;
     width:90px;
     background-repeat: no-repeat;
