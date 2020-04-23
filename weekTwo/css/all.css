@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("about.css");
+@import url("myBrand.css");
+@import url("otherWorks.css");
+@import url("contact.css");
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 42px;
+    width:100vw;
+
+}
+
+
+
+main{
+    width: 1920px;
+    margin:0 auto;
+    
+}
+
+h1{
+    font-size: 64px;
+    line-height: 75px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.font-rotobo-bold{
+    font-size: 24px;
+    line-height: 42px;
+    font-weight: 500;
+    font-style: italic;
+
+}
+
+.font-rotobo-medium{
+    font-size: 24px;
+    line-height: 42px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* .font-rotobo-medium-small{
+    font-size: 20px;
+    line-height: 42px;
+    font-weight: 400;
+    font-style: italic;
+} */
+
+
+
+.jumbotron{
+    background-image: url("../img/banner.png");
+    width: 100%;
+    height: auto;
+    height: 958px;
+    background-color: yellow;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 64px;
+    
+}
+
+.jumbotron-content{
+    width: 308px;
+}
+.jumbotron h1{
+    font-size: 80px;
+    line-height: 94px;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 32px;
+}
+.jumbotron p{
+    width: 93%; 
+    text-align: justify;    
+    margin:0 auto;
+    margin-bottom: 48px;
+
+}
+
+
+
+.jumbotron h5{
+
+}
+
+.jumbotron ul{
+    display:flex;
+    justify-content: space-between;
+}
+.jumbotron a{
+    display: block;
+    cursor: pointer;
+}
+
+.behence{
+    background:url(../img/behance.svg);
+    width: 60px;
+    height: 60px;
+}
+.facebook{
+    background:url(../img/facebook.svg);
+    width: 60px;
+    height: 60px;
+}
+.instagram{
+    background:url(../img/instagram.svg);
+    width: 60px;
+    height: 60px;
+
+}
+.youtube{
+    background:url(../img/youtube.svg);
+    width: 60px;
+    height: 60px;
+
+}
