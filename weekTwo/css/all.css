@@ -17,16 +17,10 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     line-height: 42px;
-    width:100vw;
-
 }
 
-
-
 main{
-    width: 1920px;
-    margin:0 auto;
-    
+    margin:0 auto;    
 }
 
 h1{
@@ -62,9 +56,10 @@ h1{
 
 .jumbotron{
     background-image: url("../img/banner.png");
-    width: 100%;
-    height: auto;
     height: 958px;
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size:cover;
     color:#fff;
     display: flex;
     flex-direction: column;
@@ -73,6 +68,7 @@ h1{
     margin-bottom: 64px;
     
 }
+
 
 .jumbotron-content{
     width: 308px;
