@@ -1,0 +1,38 @@
+
+.education{
+    margin-bottom: 72px;
+}
+
+.education-content div{
+    display: table;
+    position: relative;
+    width:50px;
+    border:1px solid #7d7d7d;
+}
+
+.education-content li{
+    margin-bottom: 32px;
+    
+}
+
+.education-content li:last-child{
+    margin-bottom: 0;
+   
+}
+
+.education-content p.decoration:last-of-type{
+    top:68px;
+    
+}
+
+.education-content p.decoration:first-of-type{
+    height: 68px;
+    width: 0px;
+    border-left: 3px solid #96A9c4;
+    position: absolute;
+    top:8px;
+    left:22px;
+    z-index: -1;
+}
+
+

@@ -1,0 +1,74 @@
+.footer{
+    width: 100%;
+    background-color: #415165;
+    text-align: center;
+    color: #fff;
+    padding:24px 0 48px 0;
+
+}
+
+.footer p.contact-title{
+    margin-bottom: 8px;
+}
+
+.footer p.contact-title span{
+    color:#fff;
+    font-family: Robot,Arial, Helvetica, sans-serif;
+    font-weight: 200;
+
+}
+
+.footer p.contact-title + .hr{
+    width: 1200px;
+    height: 2px;
+    display: block;
+    border-top: 1px solid #fff;
+    margin:0 auto;
+    margin-bottom: 32px;
+}
+
+.footer ul li{
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 36px;
+
+}
+.footer+ul>li:last-child{
+    margin-bottom: 0;
+}
+.footer+ul>li:last-child{ 
+   font-weight: 300;
+
+}
+.sns-logos{
+    height: 48px;
+}
+
+.sns-logos li{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin:auto 0;
+    margin-right: 24px; 
+}
+
+
+
+.sns-logos a{ 
+    display:block;
+    background-repeat:no-repeat;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+.sns-logos .facebook{
+    background:url("../img/facebook.svg");
+}
+
+.sns-logos .intagram{
+    background:url("../img/instagram-alt.svg");
+}
+
+.sns-logos .line{
+    background:url("../img/line.svg");
+}

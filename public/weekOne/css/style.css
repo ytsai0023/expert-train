@@ -1,0 +1,134 @@
+@import url("education.css");
+@import url("skills.css");
+@import url("experience.css");
+@import url("footer.css");
+@font-face{
+    font-family: "Andale Mono,Regular";
+    src: url('ANDALEMO.woff') format('woff');
+}
+@font-face{
+    font-family: "Roboto";
+    src: url('Roboto-Medium.ttf') format('ttf');
+}
+@font-face{
+    font-family: "Roboto-light";
+    src: url('Roboto-Light.ttf') format('ttf');
+}
+*,
+*::before,
+*::after{
+    box-sizing:inherit;
+}
+
+
+html{
+    box-sizing:border-box;
+
+}
+
+body {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  font-family: 蘋方-繁,Arial, Helvetica, sans-serif;
+ 
+
+}
+
+.container{
+    width:1200px;
+    margin: 0 auto;
+}
+
+.banner{
+    margin-top: 48px;
+    margin-bottom: 48px;
+    font-size: 80px;
+    font-family: 'Regular 80px/90px Andale Mono;';
+    letter-spacing: 0px;
+    
+}
+
+.banner-text{
+    width:280px;
+    height: 180px;
+    margin-bottom: 24px;
+    line-height: 90px;
+    font-family: Andale Mono,Regular,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+}
+
+.header{
+    height: 324px;
+    margin-bottom: 48px;
+}
+
+.header img{
+   width: 324px;
+   height: 324px;
+}
+
+.profile{
+    height: 100%;
+    position: relative;
+    margin-bottom: 72px;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.list-group-title{
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: bolder;
+}
+
+.list-group-title span{
+    margin-left: 16px;
+    font-size: 24px;
+    font-weight: bolder;
+    font-family: Roboto,Arial, Helvetica, sans-serif;
+    color:#A00404;
+}
+
+.header-hr,.list-group-title + hr{
+    border:1px solid #000;
+    margin-bottom: 16px;
+}
+.header-hr{
+  margin:0;
+}
+
+.profile-content ul,.education ul{
+    display: block;
+   
+    margin-left: 48px;
+} 
+.profile-content ul{
+    width: 438px;
+}
+
+.list-li-style li{
+    display: block;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.profile-content li{
+    
+    width: 700px;
+    height: 105px;
+    margin-bottom: 24px;
+    
+} 
+
+.decoration{  
+    position: absolute;
+    left:16px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background-color: #96A9c4;
+    display:inline-block;
+    width: 16px;
+    height: 16px;
+    
+}
