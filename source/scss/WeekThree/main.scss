@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import 'variable';
+@import 'mixin';
+@import 'base';
+
+
+.header{
+    height: 108px;
+    background-color:$brown;
+    @include flex-space-between();
+
+    img{
+        width: 80px;
+        height: 48.57px;
+        @include pc-media-query{
+            margin:30px 0 0 88px;
+        }
+        @include pad-media-query{
+            margin:30px 0 0 48px;
+        }
+       
+    }
+
+    .nav{
+        @include flex();
+        @include setFontSize(20px,30px);
+        
+        @include pc-media-query{
+            margin-right: 88px;
+            margin-top: 40px;
+            li{
+                margin-left: 64px;
+               a{
+                    @include color-white();
+                    text-decoration: none;
+               } 
+            }
+
+        }
+        @include pad-media-query{
+        }
+       
+       
+
+
+       
+    }
+}
+
+.jumbotron-container{
+    
+
+    .jumbotron-img{
+        height: 840px;
+        background-image: url("../../src/images/week3/68.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        div{
+            position: absolute;
+            top:45%;
+            right:25%;
+    
+            h4{
+                @include setFontSize(36px,54px);
+                color:$deep-brown;
+                // @include border();
+                width: 526px;
+            }
+        
+            h1{
+                @include setFontSize(64px,96px);
+                color:$deep-brown;
+                // @include border();
+                width: 580px;
+                
+            }
+        }
+
+    }
+
+    .jumbotron-apeal{
+        background-color:#AA06010D;
+        text-align: center;
+        padding-top: 64px;
+       
+        h1{
+            @include setFontSize(48px,72px);
+            color:$deep-brown;
+            margin-bottom: 60px;
+
+        }
+
+        ul{         
+            @include flex-center();
+           
+            li{
+                
+                margin-left: 98px;
+                margin-bottom: 80px;
+                width: 240px;
+               
+                .svg{
+                    height: 100px;
+                    @include background-image-clip();
+                    margin-bottom: 40px;
+                }
+
+                .money{
+                    @extend .svg;
+                    background-image: url(../../src/images/week3/iconfinder_circle-dollar_430089.svg);                                 
+                }
+                .clock{
+                    @extend .svg;
+                    background-image: url(../../src/images/week3/iconfinder_clock-1_430090.svg);                                 
+                }
+                .heart{
+                    @extend .svg;
+                    background-image: url(../../src/images/week3/iconfinder_heart_430099.svg);                                 
+                }
+                .glass{
+                    @extend .svg;
+                    background-image: url(../../src/images/week3/iconfinder_glasses_430098.svg);                                 
+                }
+
+                h4{
+                    color:$deep-brown;
+                    text-align: center;
+                    margin-bottom:4px;
+                }
+                p{
+                    text-align:justify;
+                }
+            }
+        }
+    }
+    
+}
+
+.spectacles-list{
+    width: 1200px;
+    margin:0 auto;
+    padding-top: 64px;
+    margin-bottom: 80px;
+    @include border();
+    h1{
+        @include setFontSize(48px,72px);
+        color:$deep-brown;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    $font-size:48px;
+    li{
+        @include flex();
+        text-transform: uppercase;
+        margin-bottom: 32px;
+       
+
+        p{
+            @include setFontSize($font-size,72px);
+            color:$deep-brown;
+            align-items: center;
+            line-height: 320px;
+            position: relative;
+            margin-left: 80px;
+        
+        }      
+        
+    }
+
+    li p::before{
+        content: '';
+        @include setWandH(48px,48px);
+        top:calc(50% - #{$font-size/ 2});
+        left:calc(-1 * calc(48px + 8px));
+        position: absolute;
+
+    }
+
+    li:first-child p::before{
+        background:url(../../src/images/week3/iconfinder_44_2529968.svg);
+        background-repeat: no-repeat;
+
+    }
+  
+    li:last-child {
+        margin-bottom: 0;
+    }
+
+    li:last-child p::before{
+        background:url(../../src/images/week3/Page-1.svg);
+        background-repeat: no-repeat;
+
+    }
+    
+    li:nth-child(2){
+        display: flex;
+        flex-direction: row-reverse;
+
+        p{
+            margin-right:24px;
+        }
+
+        p::before{
+            background:url(../../src/images/week3/Layer_1.svg);
+        }
+    }
+   
+}
+
+.poster-section{
+    height: 2550px;
+}
+
+.jointly-design{
+    background:url(../../src/images/week3/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png);
+    background-repeat: no-repeat;
+    height:2162px;
+    background-size:cover;
+    background-position: top;
+    text-align: center;
+    padding-top: 64px;
+    $margin:8px;
+   
+    .pictures{
+        width: 1540px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+
+    h1{
+        @include setFontSize(48px,72px);
+        color:$white;
+        margin-bottom: 60px;
+    }
+    
+    .section-1{
+        // @include border();
+        @include flex();
+       
+        >img{
+            margin-right: $margin;
+        }
+    }
+    .section-2{
+        
+        img{
+            margin-bottom: $margin;
+
+        }
+    }
+    .section-3{
+        @include flex();
+
+        >img{
+            height: 380px;
+            margin-right: $margin;
+            margin-bottom: 0;           
+        }
+    }
+
+    .section-4{
+        position: relative;
+        img{
+            margin-bottom: 8px;
+        }
+        $margin:calc((167px - 105px)/2);
+        .decoration{
+            @include setWandH(259px,167px);
+            background:url(../../src/images/week3/5.png);
+            position: absolute;
+            z-index: 10;
+            right: calc(48px + 17px + 19px);
+        }
+
+        p{
+            float:right;
+            color:$deep-brown;
+            background-color:$white;
+            @include setWandH(320px,105px);
+            @include setFontSize(72px,108px);
+            text-align: left;
+            padding-left: 27px;
+            margin-bottom: 0;
+            margin-top:$margin;
+            padding-left:$margin;
+            position: relative;
+            z-index: 100;
+        }
+
+        p::after{
+            content:'';
+            background:url(../../src/images/week3/ic_arrow_forward_24px.svg);
+            @include setWandH(48px,48px);
+            position: absolute;
+            right:30px;
+            top:29px;
+        }
+        
+    }
+}
+   
+.styles{
+        margin-bottom: 144px;
+        >ul{
+            @include flex-center();
+            
+            li{
+                display: block;
+                @include setWandH(585px,592px);
+                @include setFontSize(72px,108px);
+                color:$deep-brown;
+                align-items: center;
+                @include flex-column();
+                align-items: center;
+                opacity: 1;
+                background-repeat: no-repeat;
+                p{
+                    margin-top:auto;
+                    margin-bottom:auto;
+                    z-index:999;
+                } 
+                position: relative;
+            }
+
+            .cover{
+                position: absolute;
+                top:0;
+                bottom: 0;
+                @include setWandH(100%,100%);
+                background-color: #fff;
+                opacity: 0.5;
+                
+            }
+            li:first-child{
+               background-image: url(../../src/images/week3/14.png);
+               margin-right: 30px;
+            }
+            li:last-child{
+                background-image: url(../../src/images/week3/39.png);
+                  
+             }
+
+        }
+}
+
+.recommendation{
+   
+    >ul{
+        @include flex-center();
+        
+        li{
+            border:1px solid $border-gray;
+            border-top: 0;
+            margin-right: 24px;
+            width: 285px;
+            @include setWandH(282px,auto);
+           
+            .content{
+                padding-left: 16px;
+                
+            }
+            
+            img{
+                @include margin-b(16px);
+                margin-left: -1px;
+            }
+
+            h4{
+                @include margin-b(16px);
+                @include setFontSize(16px,21px);
+                text-align: left;
+            }
+
+            .comment{
+                @include setWandH(250px,120px);
+                @include setFontSize(12px,24px);
+                @include margin-b(16px);
+                text-align: left;
+                text-justify: distribute;
+            }
+
+            .time{
+                bottom: 16px;
+                @include margin-b(16px);
+                @include setFontStyle($font-r,200);
+                font-size: 10px;
+                
+            }
+        }
+  
+    }
+}
+
+.contact{
+    background-color:$light-pink;
+    @include flex-column();
+    @include padding-t(64px);
+    align-items: center;
+    
+    h1{
+      @include setFontSize(48px,72px);
+      @include margin-b(24px);
+    }
+
+    .form-section{
+        width: 792px;
+       
+        p{
+            @include setFontSize(20px,30px);
+            @include margin-b(20px);
+        }
+
+        .form form{
+          // @include flex-column();
+            input[type=text]{
+                height: 50px;
+                width: 100%;
+                @include margin-b(16px);
+            }
+
+            label{
+                @include setFontSize(16px,24px);
+                @include margin-b(4px);
+                display: block;
+            }
+
+            div{
+               @include flex();
+               @include margin-b(42px);
+               width: 120%;
+               
+            }
+
+            button{
+                display: block;
+                margin:0 auto;
+                background-color: $brown;
+                color:$white;
+                cursor: pointer;
+                @include setWandH(180px,54px);
+                @include setFontSize(16px,24px);
+                @include margin-b(92px);
+
+            }
+        }
+    }
+}
+
+.footer-content{
+    @include setWandH(1150px,auto);
+    margin: 0 auto;
+   
+    h4{ 
+        @include margin-b(24px);
+        img{
+            @include setWandH(36px,36px);
+            margin-right: 23px;
+            vertical-align: baseline;
+        }
+
+        a{
+            @include setFontSize(36px,54px);
+          
+            color:$white;
+            text-decoration: none;
+           
+        }
+
+    }
+
+}
+
+.footer{
+    background-color:$brown;
+    @include padding-t(48px);
+
+    .links-group{
+        @include flex-space-between();
+        @include margin-b(32px);
+        color:$white;
+        align-items: center;
+        
+        a{
+        display: block;
+        color: #fff;
+        text-decoration: none;
+       
+        }
+        .nav{
+            @include flex();
+            @include setFontSize(16px,24px);  
+            a{
+                margin-right:24px;
+            }
+            
+        }
+        .sns-icons{
+       
+             @include flex();
+             li{
+                margin-left: 32px;
+            }
+             }
+           
+            .facebook a img{
+                @include setWandH(48px,48px);
+               
+
+        }
+    }
+}
+
+.hr{
+    display: block;
+    @include margin-b(24px);
+}
+
+.copy-right{
+    @include flex-space-between();
+   
+    li,a{
+        color:$white;
+        text-decoration: none;
+        @include setFontSize(14px,21px);
+
+    }
+    ul:first-child{
+        @include flex();
+        align-items: center;
+        img{
+            margin-right: 38px;
+            margin-bottom: 27.43px;
+            vertical-align: middle;
+        }
+    }
+
+    ul:last-child{
+        @include flex();
+        align-items: center;
+        a{
+            margin-left: 62px;
+        }
+    }
+}
+
+
+
+
+

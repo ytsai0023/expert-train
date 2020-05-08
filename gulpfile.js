@@ -24,7 +24,7 @@ gulp.task('sass',function(){
 gulp.task('browser-sync',function (){
     browserSync.init({
         server:'./public',
-        notify:false,
+        notify:true,
         open:true
     })
 })

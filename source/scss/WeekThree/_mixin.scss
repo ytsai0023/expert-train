@@ -1,0 +1,77 @@
+
+@mixin flex(){
+    display: flex;
+}
+@mixin flex-column(){
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-space-between(){
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-center(){
+    display: flex;
+    justify-content: center;
+}
+
+@mixin color-white{
+    color:#fff;
+}
+
+@mixin setFontSize($size,$height){
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin setFontStyle($f-family,$f-weignt){
+    font-family: $f-family;
+    font-weight: $f-weignt;
+}
+
+@mixin border(){
+    border:yellow 1px solid;
+}
+
+@mixin background-image-clip(){
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center center;
+}
+
+@mixin setWandH($w,$h){
+    width: $w;
+    height: $h;
+}
+
+@mixin padding-t($h){
+    padding-top: $h;
+}
+
+@mixin margin-b($h){
+    margin-bottom: $h;
+}
+
+
+@mixin pc-media-query(){
+    @media (min-width: $pc-min-media){
+        @content
+    }
+}
+
+@mixin  pad-media-query(){
+    @media (max-width: $pad-max-media) and (min-width:$pad-min-media){
+        @content
+    }
+
+}
+
+@mixin  phone-media-query(){
+    @media (max-width: $phone-max-media){
+        @content
+    }
+
+}
+
+
