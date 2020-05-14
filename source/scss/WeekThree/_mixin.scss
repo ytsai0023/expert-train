@@ -6,6 +6,12 @@
     display: flex;
     flex-direction: column;
 }
+
+@mixin flex-column-center(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 @mixin flex-space-between(){
     display: flex;
     justify-content: space-between;
@@ -25,6 +31,47 @@
     line-height: $height;
 }
 
+@mixin setFontSize-rwd($pc-size:0,$pad-size:0,$phone-size:0){
+
+    @if $pc-size != 0{
+        @include pc-media-query(){
+            font-size: $pc-size;
+        }
+    }
+    @if $pad-size !=0{
+        @include pad-media-query(){
+            font-size: $pad-size;
+        }
+    }
+    @if $phone-size != 0{
+        @include phone-media-query(){
+            font-size: $phone-size;
+        }
+    }
+
+}
+
+@mixin setLineHeight-rwd($pc-lh:0,$pad-lh:0,$phone-lh:0){
+
+    @if $pc-lh != 0{
+        @include pc-media-query(){
+            line-height: $pc-lh;
+        }        
+
+    }
+    @if $pad-lh !=0{
+        @include pad-media-query(){
+            line-height: $pad-lh;
+        }
+        
+    }
+    @if $phone-lh != 0{
+        @include phone-media-query(){
+            line-height: $phone-lh;
+        }
+    }
+}
+
 @mixin setFontStyle($f-family,$f-weignt){
     font-family: $f-family;
     font-weight: $f-weignt;
@@ -34,7 +81,36 @@
     border:yellow 1px solid;
 }
 
-@mixin background-image-clip(){
+@mixin phone-media-query(){
+    @media (max-width: $phone-max-media){
+        @content
+    }
+
+}
+
+@mixin pc-media-query(){
+    @media (min-width: $pc-min-media){
+        @content
+    }
+}
+
+@mixin pad-media-query(){
+    @media (max-width: $pad-max-media) and (min-width:$pad-min-media){
+        @content
+    }
+
+}
+
+
+
+@mixin pc-and-pad-media-query(){
+    @media (min-width: $pad-min-media){
+        @content
+    }
+}
+
+
+@mixin set-background-image(){
     background-repeat:no-repeat;
     background-size:contain;
     background-position: center center;
@@ -45,33 +121,134 @@
     height: $h;
 }
 
+@mixin set-rwd-WandH($pc-w:0,$pc-h:0,$pad-w:0,$pad-h:0,$phone-w:0,$phone-h:0){
+
+    @if $pc-w > 0 or $pc-h >0{
+        @include pc-media-query(){
+            width: $pc-w;
+            height: $pc-h;
+        } 
+    }
+
+    @if $pad-w > 0 or $pad-h >0{
+        @include pad-media-query(){
+            width: $pad-w;
+            height: $pad-h;
+        } 
+    }
+
+    @if $phone-w > 0 or $phone-h >0{
+        @include phone-media-query(){
+            width: $phone-w;
+            height: $phone-h;
+        } 
+    }
+}
+
+
 @mixin padding-t($h){
     padding-top: $h;
+}
+
+@mixin  padding-t-rwd($pc-h:0,$pad-h:0,$phone-h:0) {
+    @if $pc-h > 0 {
+        @include pc-media-query(){
+            padding-top:$pc-h;
+        }
+    }
+    @if $pad-h > 0{
+        @include pad-media-query(){
+            padding-top:$pad-h;
+        }
+    }
+    @if $phone-h > 0{
+        @include phone-media-query(){
+            padding-top:$phone-h;
+        }
+    }
 }
 
 @mixin margin-b($h){
     margin-bottom: $h;
 }
 
-
-@mixin pc-media-query(){
-    @media (min-width: $pc-min-media){
-        @content
+@mixin  margin-b-rwd($pc-h:0,$pad-h:0,$phone-h:0) {
+    @if $pc-h > 0 {
+        @include pc-media-query(){
+            margin-bottom:$pc-h;
+        }
+    }
+    @if $pad-h > 0{
+        @include pad-media-query(){
+            margin-bottom:$pad-h;
+        }
+    }
+    @if $phone-h > 0{
+        @include phone-media-query(){
+            margin-bottom:$phone-h;
+        }
     }
 }
 
-@mixin  pad-media-query(){
-    @media (max-width: $pad-max-media) and (min-width:$pad-min-media){
-        @content
+@mixin  margin-r-rwd($pc-m-t:0,$pad-m-t:0,$phone-m-t:0) {
+    @if $pc-m-t>0 {
+        @include pc-media-query(){
+            margin-right:$pc-m-t;
+        }
+    }
+    @if $pad-m-t>0{
+        @include pad-media-query(){
+            margin-right:$pad-m-t;
+        }
+    }
+    @if $phone-m-t>0{
+        @include phone-media-query(){
+            margin-right:$phone-m-t;
+        }
+    }
+}
+
+
+@mixin setImgSize($pad-w:auto,$pad-h:auto,$phone-w:auto,$phone-h:auto){
+    @include pad-media-query{
+        width:$pad-w;
+        height:$pad-h;
+    }
+
+    @include phone-media-query{
+        width:$phone-w;
+        height: $phone-h;
     }
 
 }
 
-@mixin  phone-media-query(){
-    @media (max-width: $phone-max-media){
-        @content
+@mixin set-complexity-images-rwd($media:pc,$width:0,$height:0,$mar-r:0,$mar-b:0){
+    @if $media == pc{
+        @include pc-media-query{
+         width:$width;
+         height:$height;
+         margin-right: $mar-r;
+         margin-bottom: $mar-b;
+        }
+       
     }
-
-}
-
+    @if $media == pad{
+        @include pad-media-query{
+         width:$width;
+         height:$height;
+         margin-right: $mar-r;
+         margin-bottom: $mar-b;
+        }
+       
+    }
+    @if $media == phone{
+         @include phone-media-query{
+             width:$width;
+             height:$height;
+             margin-right: $mar-r;
+             margin-bottom: $mar-b;
+         }
+    }
+   
+ }
 
