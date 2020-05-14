@@ -11,14 +11,6 @@ const reload = browserSync.reload;
 
 
 
-
-// gulp.task('sass',function(){
-//     return gulp.src('./src/scss/**/*.scss')
-//         .pipe(sass().on('error',sass.logError))
-//         .pipe(gulp.dest('./public/css'))
-   
-// })
-
 gulp.task('sass',function(){
     return watch('./source/scss/**/*.scss',function(){
         gulp.src(['./source/scss/**/*.scss','./src/scss/**/_*.scss'])

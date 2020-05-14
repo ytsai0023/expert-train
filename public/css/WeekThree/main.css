@@ -184,7 +184,7 @@ a {
     display: none; }
   .questions .content-show {
     display: block;
-    height: 116px;
+    height: 160px;
     background-color: #F2F2F2; }
     @media (max-width: 415px) {
       .questions .content-show {

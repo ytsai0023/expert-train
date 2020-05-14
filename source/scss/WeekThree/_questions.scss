@@ -94,7 +94,7 @@
 
     .content-show{
         display: block;
-        height:116px;
+        height:160px;
         @include phone-media-query{
             height: 195px;
         }

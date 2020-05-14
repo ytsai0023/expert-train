@@ -18,11 +18,11 @@ const footer = `
 <div class="footer-content">
     <div class="links-group">
         <ul class="nav">
-            <li><a href="">首頁</a></li>
-            <li><a href="">系列鏡框</a></li>
-            <li><a href="">門市據點</a></li>
-            <li><a href="">部落格</a></li>
-            <li><a href="">常見問題</a></li>
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">系列鏡框</a></li>
+            <li><a href="#">門市據點</a></li>
+            <li><a href="#">部落格</a></li>
+            <li><a href="#">常見問題</a></li>
         </ul>
         <ul class="sns-icons">
             <li class="facebook"><a href=""><img src="../src/images/week3/ic_social_fb.svg" alt=""></a></li>
@@ -42,8 +42,8 @@ const footer = `
     <li><p>Copyright © 2020 Glasses.All rights reserved.</p></li>
     </ul>
     <ul>
-    <li><a href="">隱私權政策</a></li>
-    <li><a href="">服務條款</a></li>
+    <li><a href="#">隱私權政策</a></li>
+    <li><a href="#">服務條款</a></li>
     </ul>
     <script>
 
