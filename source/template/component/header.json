@@ -1,0 +1,17 @@
+{
+    "header":
+    `<header class=\"header\">
+    <button class=\"menu-button\" id=\"menu-button\">
+        <span>
+            <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><defs><style>.a{fill:none;}.b{fill:#fff;}</style></defs><path class=\"a\" d=\"M0,0H24V24H0Z\"/><path class=\"b\" d=\"M3,18H21V16H3Zm0-5H21V11H3ZM3,6V8H21V6Z\"/></svg>
+        </span>
+    </button>
+    <img src=\"../src/images/week3/logo-new_工作區域 1-1.png\" alt=\"Icon\" class=\"header-icon\">
+    <ul class=\"nav\">
+        <li><a href=\"#\">系列鏡框</a></li>
+        <li><a href=\"#\">門市據點</a></li>
+        <li><a href=\"#\">部落格</a></li>
+        <li><a href=\"#\">常見問題</a></li>
+    </ul>
+</header>`
+}

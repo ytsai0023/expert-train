@@ -77,6 +77,12 @@
     font-weight: $f-weignt;
 }
 
+@mixin setFontStyle-italic($f-family,$f-weignt){
+    font-family: $f-family;
+    font-weight: $f-weignt;
+    font-style: italic;
+}
+
 @mixin border(){
     border:yellow 1px solid;
 }
@@ -143,6 +149,35 @@
             height: $phone-h;
         } 
     }
+
+    
+}
+
+
+@mixin set-rwd-Width($pc-w:0,$pad-w:0,$phone-w:0){
+
+    @if $pc-w>0 {
+        @include pc-media-query(){
+            width: $pc-w;
+           
+        } 
+    }
+
+    @if $pad-w > 0{
+        @include pad-media-query(){
+            width: $pad-w;
+          
+        } 
+    }
+
+    @if $phone-w > 0{
+        @include phone-media-query(){
+            width: $phone-w;
+          
+        } 
+    }
+
+    
 }
 
 
@@ -164,6 +199,24 @@
     @if $phone-h > 0{
         @include phone-media-query(){
             padding-top:$phone-h;
+        }
+    }
+}
+
+@mixin  padding-l-rwd($pc-w:0,$pad-w:0,$phone-w:0) {
+    @if $pc-w > 0 {
+        @include pc-media-query(){
+            padding-left:$pc-w;
+        }
+    }
+    @if $pad-w > 0{
+        @include pad-media-query(){
+            padding-left:$pad-w;
+        }
+    }
+    @if $phone-w > 0{
+        @include phone-media-query(){
+            padding-left:$phone-w;
         }
     }
 }

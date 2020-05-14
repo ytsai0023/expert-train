@@ -2,10 +2,12 @@
 @import 'variable';
 @import 'mixin';
 @import 'base';
+@import 'questions';
 
 
 .header{
     height: 108px;
+    @include setFontStyle($font-r,400);
     @include phone-media-query{
         height: 50px;
         align-items: center;
@@ -30,6 +32,9 @@
         
             svg{
                  @include setWandH(24px,24px);
+                 .b{
+                    fill:$white;
+                 }
             }
         }
         z-index: 20;
@@ -125,23 +130,10 @@
 }
 
 
-// .dropdown {
-//     position: absolute;
-//     left: 0;
-//     top: 100%;
-//     width: 100%;
-//     max-height: 0px;
-//     transition: all 0.8s;
-//     overflow: hidden;
-//     z-index: 120;
-//   }
-
-
 .jumbotron-container{
     
     .jumbotron-img{
-        border: 1px solid green;
-        
+     
         @include pc-and-pad-media-query{
              height: 840px;
         }
@@ -166,12 +158,16 @@
         }
 
         div{
-    
             position: absolute;
             top:45%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
             @include pc-media-query{               
                
                 right:20%;
+                display: flex;
+                justify-content: flex-end;
                
             }
             @include pad-media-query{
@@ -190,11 +186,13 @@
               
             }
             h4{
+                @include setFontStyle($font-a,400);
                 @include setFontSize-rwd(36px,20px,16px);
-                @include setLineHeight-rwd(64px,30px,30px);
+                @include setLineHeight-rwd(54px,30px,30px);
             }
 
             h1{
+                @include setFontStyle($font-a,500);
                 @include setFontSize-rwd(64px,48px,32px);
                 @include setLineHeight-rwd(96px,72px,72px);
             }
@@ -236,7 +234,6 @@
 
     .jumbotron-apeal{
         background-color:#AA06010D;
-        border: 1px solid yellow;
         text-align: center;
         @include pc-media-query{
             padding-top: 64px;
@@ -247,7 +244,7 @@
         }
         h1{          
             color:$deep-brown;
-            
+            @include setFontStyle($font-a,700);
             @include setFontSize-rwd(48px,32px,24px);
             @include setLineHeight-rwd(72px,48px,48px);
             @include margin-b-rwd(60px,42px,32px);
@@ -285,7 +282,7 @@
                     width: 228px;
                     margin:0 auto;
                     margin-bottom: 28px;
-                    @include border();
+                   
                 }
                 
                 .svg{
@@ -323,6 +320,7 @@
                     color:$deep-brown;
                     text-align: center;
                     margin-bottom:4px;
+                    @include setFontStyle($font-a,500);
                     @include setFontSize-rwd(24px,20px,20px);
                     @include setLineHeight-rwd(36px,30px,30px);
                 }
@@ -371,6 +369,7 @@
         @include setFontSize-rwd(48px,32px,24px);
         @include setLineHeight-rwd(72px,48px,48px);
         @include margin-b-rwd(60px,32px,16px);
+        @include setFontStyle($font-a,500);
         color:$deep-brown;
         text-align: center;
        
@@ -436,10 +435,10 @@
                 .a{
                     fill:$white;
                     @include pc-media-query{
-                        fill:$deep-brown;
+                        fill:$brown;
                     }
                     @include pad-media-query{
-                        fill:$deep-brown;
+                        fill:$brown;
                     }
                 }
            }
@@ -447,8 +446,8 @@
 
 
         p{
-            color:$deep-brown;
-           
+            color:$brown;
+            @include setFontStyle-italic($font-r,700);
             @include pc-media-query{
                 @include setFontSize($font-size,72px);
                 position: relative;
@@ -549,7 +548,6 @@
 }
 
 .jointly-design{
-    border: 3px solid green;
     background-repeat: no-repeat;
     @include margin-b-rwd(144px,40px,24px);
     background-size:cover;
@@ -561,7 +559,6 @@
 
      .pictures{
         margin: 0 auto;
-        border: 1px solid #fff;
         @include pc-media-query{
             width:1540px;
             margin-bottom: 60px;
@@ -581,9 +578,9 @@
 
     h1{
         color:$white;
+        @include setFontStyle($font-a,400);
         @include setFontSize-rwd(48px,32px,24px);
         @include setLineHeight-rwd(72px,48px,36px);
-      
         @include margin-b-rwd(60px,32px,16px);
       
     }
@@ -692,11 +689,12 @@
 
         p{
             float:right;
-            color:$deep-brown;
+            color:$brown;
             background-color:$white;
             $pc-paddign-left:27px;
             $pad-paddign-left:19px;
             $phone-paddign-left:12px;
+            @include setFontStyle($font-r,500);
             @include pc-media-query{
                 @include setWandH(320px,105px);
                 @include setFontSize(72px,108px);
@@ -724,7 +722,6 @@
             margin-bottom: 0;
             position: relative;
             z-index: 100;
-            border: 2px solid purple;
 
 
             .word-2,.word-3{
@@ -788,7 +785,7 @@
           
         }
         p:hover::after{
-            transform: translateX(15px);
+            transform: translateX(20px);
         }
     }
 }
@@ -799,15 +796,15 @@
             @include flex-center();
             @include phone-media-query{
               @include flex-column-center();
-              border: 1px solid #fff;
+            
             }
             
             li{
                 display: block;
-                
+                @include setFontStyle($font-r,500);
                 @include setFontSize-rwd(72px,32px,32px);
                 @include setLineHeight-rwd(108px,25px,25px);
-                color:$deep-brown;
+                color:$brown;
                 align-items: center;
                 @include flex-column();
                 opacity: 1;
@@ -860,7 +857,8 @@
     h1{
             @include setFontSize-rwd(48px,48px,24px);
             @include setLineHeight-rwd(72px,48px,36px);
-            @include margin-b-rwd(60px,32px,16px);        
+            @include margin-b-rwd(60px,32px,16px); 
+            @include setFontStyle($font-a,400);       
     }
     >ul{
       
@@ -901,13 +899,15 @@
             h4{
                 @include margin-b(16px);
                 @include setFontSize(16px,21px);
+                @include setFontStyle($font-r,500);
                 text-align: left;
             }
 
             .comment{
-                @include setWandH(250px,70px);
+                width: 250px;
                 @include setFontSize(12px,24px);
                 @include margin-b(16px);
+                @include setFontStyle($font-r,400);
                 text-align: left;
                 text-justify: distribute;
             }
@@ -915,6 +915,7 @@
             .time{
                 bottom: 16px;
                 text-align: left;
+                
                 @include margin-b(16px);
                 @include setFontStyle($font-r,200);
                 font-size: 10px;
@@ -951,6 +952,7 @@
         @include setFontSize-rwd(48px,32px,20px);
         @include setLineHeight-rwd(72px,48px,48px);
         @include margin-b-rwd(24px,16px,8px);
+        @include setFontStyle($font-a,500);
     }
  
     .form-section{
@@ -1013,6 +1015,7 @@
                 @include set-rwd-WandH(180px,54px,136px,36px,136px,36px);
                 @include setFontSize(16px,24px);
                 @include margin-b-rwd(92px,56px,48px);
+                @include setFontStyle($font-r,400);
 
             }
             
@@ -1080,6 +1083,7 @@
             @include flex();
 
             a{
+                @include setFontStyle($font-a,300);
                 @include pc-media-query{
                     margin-right:24px;
                 }
@@ -1125,7 +1129,7 @@
     }
    
     .phone,.mail{
-       
+        @include setFontStyle($font-r,300);
         @include pc-media-query{
             margin-bottom: 22px;
             img{
@@ -1180,6 +1184,7 @@
 }
 
 .copy-right{
+    @include setFontStyle($font-r,200);
     @include flex-space-between();
     @include pc-media-query{
         width: 1150px;
@@ -1228,7 +1233,7 @@
 
 
     ul:first-child{
-       
+      
         img{
             @include pc-media-query{
                 margin-right: 38px;
@@ -1247,14 +1252,25 @@
                 margin: 0;
             }
         }
-        li:first-child{
-            
-        }
     }
 
-    ul:last-child{
+    ul:last-of-type{
         align-items: center;
+       
         li{
+            display: inline-block;
+            @include pc-media-query{
+                margin-left: 62px;
+            }
+            @include pad-media-query{
+                margin-left: 24px;
+            }
+         
+        }
+
+        a{
+           
+            display: inline-block;
             @include pc-media-query{
                 margin-left: 62px;
             }
@@ -1268,6 +1284,7 @@
 
             li:last-child{
                 @include margin-b(24px);
+                
             }
         }
     }

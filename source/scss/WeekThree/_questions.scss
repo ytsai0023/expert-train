@@ -1,0 +1,121 @@
+
+
+.banner{
+    
+    background-color: #7d7d7d;
+    @include pc-and-pad-media-query{
+        background-image:url("../../src/images/week3/72.png");
+        height: 304px;
+        background-position: bottom center;
+    }
+    @include phone-media-query{
+        background-image:url("../../src/images/week3/72-1.png");
+        height: 143px;
+        background-position: bottom center;
+    }
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    position: relative;
+
+    h1{
+        @include setFontSize-rwd(64px,48px,28px);
+        @include setLineHeight-rwd(80px,80px,40px);
+       
+        position: absolute;
+        bottom: 0;
+        @include pc-media-query{
+            left:360px;
+        }
+        @include pad-media-query{
+            left:48px;
+        }
+        @include phone-media-query{
+            left:11px;
+        }
+        span{
+            border: 1px solid #000;
+        }
+        svg{
+           @include set-rwd-WandH(58px,58px,48px,48px,24px,24px);
+            vertical-align: baseline;
+        }
+    }
+}
+
+.question-container{
+   
+    margin:0 auto;
+    @include set-rwd-Width(1200px,672px,352px);
+    @include padding-t-rwd(88px,40px,24px);
+    @include margin-b-rwd(156px,104px,56px);
+    h1{
+        @include setFontSize-rwd(32px,28px,20px);
+        @include setLineHeight-rwd(63px,63px,28px);
+        @include margin-b-rwd(16px,32px,16px);
+    }
+    
+}
+
+.questions{
+    
+        border:2px solid $black;
+    li{
+
+        @include setFontSize-rwd(20px,16px,16px);
+        @include setLineHeight-rwd(23px,24px,24px);
+        @include padding-l-rwd(38px,24px,16px);
+        @include pc-media-query{
+            height:72px;
+        }
+        @include pad-media-query{
+            height:54px;
+        }
+        @include phone-media-query{
+            height:54px;
+        }
+       
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $black;
+
+    }
+
+    li:last-child{
+        border-bottom: none;
+    }
+
+    li.content{
+        display: none;
+    }
+
+
+    .content-show{
+        display: block;
+        height:116px;
+        @include phone-media-query{
+            height: 195px;
+        }
+        background-color: #F2F2F2;
+        @include pc-media-query{
+            padding: 22px 38px;
+        }
+        @include pad-media-query{
+            padding: 16px 24px;
+        }
+
+        @include phone-media-query{
+            padding: 16px 16px;
+        }
+    }
+
+
+
+    svg{
+       @include margin-r-rwd(39.75px,24px,8px);
+       @include setWandH(38.99px,24px);
+    }
+    
+}
