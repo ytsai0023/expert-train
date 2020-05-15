@@ -423,6 +423,10 @@ a {
     .jumbotron-container .jumbotron-apeal {
       padding-top: 42px;
       padding-bottom: 80px; } }
+  @media (max-width: 415px) {
+    .jumbotron-container .jumbotron-apeal {
+      padding-top: 32px;
+      margin-bottom: 24px; } }
   .jumbotron-container .jumbotron-apeal h1 {
     color: #650300;
     font-family: "蘋方-繁";
@@ -464,8 +468,7 @@ a {
         flex-wrap: wrap; } }
     @media (max-width: 415px) {
       .jumbotron-container .jumbotron-apeal ul {
-        flex-wrap: wrap;
-        margin-bottom: 56px; } }
+        flex-wrap: wrap; } }
     @media (min-width: 769px) {
       .jumbotron-container .jumbotron-apeal ul li {
         display: flex;
@@ -556,7 +559,7 @@ a {
           margin-bottom: 20px; } }
     @media (max-width: 415px) {
       .jumbotron-container .jumbotron-apeal ul li:last-child {
-        margin-bottom: 0; } }
+        margin-bottom: 56px; } }
 
 .spectacles-list {
   margin: 0 auto; }
@@ -577,9 +580,6 @@ a {
   @media (max-width: 768px) and (min-width: 416px) {
     .spectacles-list {
       padding-top: 40px; } }
-  @media (max-width: 415px) {
-    .spectacles-list {
-      padding-top: 24px; } }
   @media (min-width: 769px) {
     .spectacles-list {
       margin-bottom: 80px; } }
@@ -654,7 +654,6 @@ a {
           height: 134px; }
         .spectacles-list li div {
           text-align: center;
-          border: 1px solid #000;
           position: absolute;
           width: 100%;
           height: 100%;
