@@ -3,11 +3,11 @@ const sass = require('gulp-sass');
 const watch = require('gulp-watch');
 const browserSync = require('browser-sync');
 const template = require('gulp-template');
-var ejs = require('gulp-ejs');
-const rename = require('gulp-rename');
+const data = require('gulp-data');
 var nunjucksRender = require('gulp-nunjucks-render');
 const {header,footer,links}= require("./source/template/component/components");
 const reload = browserSync.reload;
+const app_data = require('./source/data/data.json');
 
 
 
@@ -39,9 +39,15 @@ gulp.task('nunjucks',function(){
    
    return  watch(['./source/template/**/*.html'],function(){
     gulp.src('./source/template/**/*.html')
+    .pipe(data(function(){
+        return app_data
+    }))
     .pipe(nunjucksRender({
-        path: ['./source/template/weekFour/','./source/templates/_layout.weekFour.html'],
-        watch: false,
+        path: [
+            './source/template/weekThree/'
+            ,'./source/template/weekFour/'
+            ,'./source/templates/_layout-w4.html'],
+        watch: true
       }))
     .pipe(gulp.dest('./public'))
     .pipe(browserSync.stream())
@@ -57,7 +63,7 @@ gulp.task('browser-sync',function (){
     })
 })
 
-gulp.task('default',gulp.parallel('sass','template','nunjucks','browser-sync'))
+gulp.task('default',gulp.parallel('sass','nunjucks','browser-sync'))
 
 
 
