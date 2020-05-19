@@ -1,0 +1,37 @@
+
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', 'Lato',serif;
+    @include setFontSize(14px,21px);
+
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin: 0;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.margin-center{
+    margin: 0 auto;
+}

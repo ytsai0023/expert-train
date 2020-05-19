@@ -3,5 +3,11 @@
       "week_three": "第三週",
       "week_four": "第四週",
       "test":"ba-ka"
+    },
+    "path":{
+      "svg_path":"../src/images/",
+      "image_path":"../src/images/"
     }
+
+  
 }

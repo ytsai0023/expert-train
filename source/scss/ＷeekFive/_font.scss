@@ -1,0 +1,83 @@
+
+/* font */
+
+$formal-light-height:15px;
+
+.chapter{
+    @include setFontSize(12px,15px);
+    @include setFontStyle($font-loto,400);
+    @include margin-zero();
+}
+
+.time{
+    @extend .chapter;
+    font-weight: 200;
+    @include margin-zero();
+}
+
+
+.author-name{
+    @include setFontSize(12px,15px);
+    @include setFontStyle($font-loto,500);
+    @include margin-zero();
+    color:$deep-gray;
+}
+
+.post-time{
+    @extend .author-name;
+}
+
+.qty-comments{
+    @extend .author-name;
+    line-height: 12px;
+}
+.author-name-big{
+    @include setFontSize(16px,24px);
+    @include setFontStyle($font-loto,600);
+}
+
+.sub-title{
+    @extend .author-name-big;
+    line-height: 16px;
+    
+}
+
+.user-name{
+    @extend .author-name-big;
+    line-height: 24px;
+}
+
+.user-mail{
+    @include setFontSize(14px,17px);
+    @include setFontStyle($font-loto,300);
+    color:$deep-gray;
+}
+
+
+.text{
+    @include setFontSize(14px,21px);
+    @include setFontStyle($font-loto,400);
+    @include margin-zero();
+    color:$text-black;
+}
+
+
+.article-title{
+    @include setFontSize(16px,16px);
+    @include setFontStyle($font-loto,600);
+    @include margin-zero();
+    color:$text-black;
+}
+
+.attachment{
+  @extend .article-title;
+}
+
+.edit-area-font{
+    @extend .article-title;
+    color:$reply-gray;
+    font-weight: 400;
+  
+}
+
+

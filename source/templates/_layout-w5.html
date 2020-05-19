@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="../css/ＷeekFive/main.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+    <title>第五週作業dsds</title>
+</head> 
+<body class="d-flex flex-nowrap">
+   <div class="side-nav">
+       <h1>
+         {% include "logo-ANSWER.svg" %}
+       </h1>
+       <ul class="d-flex flex-column ">
+
+         <li>
+          {% include "assessment-24px.svg" %}
+            <a href="">Dashboard</a>
+        </li>
+         <li>
+          {% include "question_answer-24px.svg" %}
+            <a href="">Question</a>
+        </li>
+         <li>
+          {% include "assignment-24px.svg" %}
+             <a href="">Assignment</a></li>
+         <li>
+          {% include "video_library-24px.svg" %}
+             <a href="">Course</a>
+         </li>
+         <li>
+          {% include "supervisor_account-24px.svg" %}
+             <a href="">Admin</a></li>
+         <li>
+          {% include "settings-24px.svg" %}
+             <a href="">Settings</a></li>
+       </ul>
+       <div class="account d-flex align-items-center">
+         <div class="user-header"></div>
+         <div class="user-data">
+          <p class="user-name">Andy Chen</p>
+          <p class="user-mail">andy0401@mail.com</p>
+         </div>
+       
+       </div>
+    </div>
+   <div class="main">
+    <nav class=" top-nav navbar navbar-expand-lg navbar-light d-flex align-items-center justify-content-start">
+        <a class="navbar-brand" href="#">
+            {% block title %}
+            {% endblock %}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {% block sub_title %}
+                {% endblock %}
+              </a>
+              
+            </li>
+          </ul>
+          <ul class="icons d-flex">
+            <li>
+              {% include "search-24px.svg" %}
+            </li>
+            <li>
+              {% include "notifications_active-24px.svg" %}
+            </li>
+          </ul>
+        </div>
+      </nav>
+      {% block content %}
+      {% endblock %}
+   
+</body>
+</html>

@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', 'Lato',serif;
+  font-size: 14px;
+  line-height: 21px; }
+
+a {
+  text-decoration: none; }
+
+p {
+  margin: 0; }
+
+a:hover {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.margin-center {
+  margin: 0 auto; }
+
+/* font */
+.chapter, .time {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: Lato;
+  font-weight: 400;
+  margin: 0; }
+
+.time {
+  font-weight: 200;
+  margin: 0; }
+
+.author-name, .post-time, .qty-comments {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: Lato;
+  font-weight: 500;
+  margin: 0;
+  color: #0000009A; }
+
+.qty-comments {
+  line-height: 12px; }
+
+.author-name-big, .sub-title, .user-name {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Lato;
+  font-weight: 600; }
+
+.sub-title {
+  line-height: 16px; }
+
+.user-name {
+  line-height: 24px; }
+
+.user-mail {
+  font-size: 14px;
+  line-height: 17px;
+  font-family: Lato;
+  font-weight: 300;
+  color: #0000009A; }
+
+.text {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: Lato;
+  font-weight: 400;
+  margin: 0;
+  color: #121212; }
+
+.article-title, .attachment, .edit-area-font {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: Lato;
+  font-weight: 600;
+  margin: 0;
+  color: #121212; }
+
+.edit-area-font {
+  color: #00000062;
+  font-weight: 400; }
+
+.container {
+  height: 100vh;
+  width: 1200px; }
+
+.header, .side-nav .user-header, .card .card-body .author-header .header-image {
+  background-size: cover;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; }
+
+.side-nav {
+  display: block;
+  background-color: #EDF4EE;
+  height: 100vh;
+  width: 296px;
+  position: relative;
+  padding-top: 32px; }
+  .side-nav h1 {
+    margin-left: 32px;
+    margin-bottom: 32px; }
+  .side-nav ul {
+    padding-left: 0; }
+    .side-nav ul li {
+      margin-bottom: 17px;
+      display: flex;
+      align-items: center;
+      line-height: 40px; }
+      .side-nav ul li a {
+        color: #000;
+        display: block;
+        height: 32px;
+        font-size: 16px;
+        line-height: 32px; }
+      .side-nav ul li svg {
+        width: 24px;
+        height: 24px;
+        margin: 0 16px 0 32px; }
+      .side-nav ul li svg:hover {
+        color: #2A8356; }
+    .side-nav ul li:hover {
+      cursor: pointer;
+      box-shadow: inset 2px 0 #2A8356; }
+      .side-nav ul li:hover a {
+        color: #2A8356; }
+      .side-nav ul li:hover svg {
+        fill: #2A8356; }
+  .side-nav .account {
+    position: absolute;
+    bottom: 32px;
+    left: 32px; }
+  .side-nav .user-header {
+    background-image: url("../../src/images/week5/photo-1514794749374-fb67509dbb7f.jpeg");
+    margin-right: 16px; }
+
+.top-nav.navbar.navbar-expand-lg.navbar-light.d-flex.align-items-center {
+  padding: 0; }
+
+.top-nav.navbar {
+  width: 950px;
+  height: 96px; }
+  .top-nav.navbar .navbar-brand {
+    display: block;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 0 32px 0 46px; }
+  .top-nav.navbar .nav-item.dropdown {
+    display: inline; }
+    .top-nav.navbar .nav-item.dropdown a {
+      font-size: 16px;
+      line-height: 24px;
+      color: #000; }
+  .top-nav.navbar .icons {
+    margin-bottom: 0; }
+    .top-nav.navbar .icons li:last-child {
+      margin-left: 26px; }
+    .top-nav.navbar .icons svg {
+      width: 24px;
+      height: 24px; }
+
+.qty-comments {
+  line-height: 22px;
+  margin-bottom: 8px; }
+
+span.drop-down svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 7px;
+  fill: #2A8356; }
+
+.users-list {
+  width: 320px;
+  margin-left: 32px; }
+  .users-list .sub-title {
+    margin-bottom: 6px; }
+
+.reply-area {
+  width: 584px;
+  margin-left: 16px; }
+
+.list-group {
+  border-radius: 2px;
+  margin: 0; }
+
+.list-group-item {
+  border: #CDDDCD 1px solid;
+  color: #000; }
+  .list-group-item .article-title, .list-group-item .attachment, .list-group-item .edit-area-font {
+    margin-top: 5.5px; }
+
+.list-group-item:hover {
+  color: #000; }
+
+.list-group-item.active {
+  background-color: #EDF4EE;
+  color: #000;
+  border-color: #CDDDCD; }
+
+.card {
+  border-top: none; }
+  .card .card-header, .card .card-body {
+    border-color: #CDDDCD; }
+  .card .card-header {
+    background-color: #EDF4EE;
+    border-top: 1px solid #CDDDCD; }
+    .card .card-header .article-title, .card .card-header .attachment, .card .card-header .edit-area-font {
+      margin-top: 5.5px; }
+  .card .card-body {
+    padding: 16px 16px 12.5px 16px; }
+    .card .card-body .author-header .header-image {
+      background-image: url("../../src/images/week5/photo-1504051771394-dd2e66b2e08f.jpeg"); }
+    .card .card-body .article-content {
+      margin-left: 8px;
+      margin-right: 16px;
+      border-bottom: 1px solid #CDDDCD; }
+      .card .card-body .article-content .post-time {
+        margin-bottom: 16px; }
+      .card .card-body .article-content .text {
+        margin-bottom: 16px; }
+      .card .card-body .article-content .attachment {
+        width: 176px;
+        height: 40px;
+        background-color: #EDF4EE;
+        border: 1px solid #CDDDCD;
+        margin-bottom: 16.5px;
+        border-radius: 2px; }
+        .card .card-body .article-content .attachment svg {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px; }
+  .card .edit-area-title {
+    padding: 16px 122px 16px 25px;
+    position: relative; }
+    .card .edit-area-title ul {
+      margin: 0;
+      padding: 0; }
+    .card .edit-area-title a:hover {
+      color: #121212; }
+  .card .edit-area-content {
+    padding: 16px 24px;
+    height: 263px; }
+  .card .button-area {
+    position: absolute;
+    bottom: 16px;
+    right: 24px; }
+    .card .button-area input {
+      width: 112px;
+      height: 35px;
+      border-radius: 2px; }
+    .card .button-area .btn-light {
+      border: 1px solid #2A8356;
+      background-color: #fff;
+      color: #2A8356;
+      margin-right: 8px; }
+    .card .button-area .btn-primary {
+      background-color: #2A8356; }

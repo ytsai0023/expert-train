@@ -2,13 +2,10 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const watch = require('gulp-watch');
 const browserSync = require('browser-sync');
-const template = require('gulp-template');
 const data = require('gulp-data');
 var nunjucksRender = require('gulp-nunjucks-render');
-const {header,footer,links}= require("./source/template/component/components");
 const reload = browserSync.reload;
 const app_data = require('./source/data/data.json');
-
 
 
 gulp.task('sass',function(){
@@ -20,33 +17,23 @@ gulp.task('sass',function(){
     })
 })
 
-
-gulp.task('template',function(){
-    return watch(['./source/template/**/*.html'],function(){
-        gulp.src(['./source/template/**/*.html','./source/template/**/*.js'])
-        .pipe(template({
-            header
-           ,footer
-           ,links
-        }))
-        .pipe(gulp.dest('./public'))
-        .pipe(browserSync.stream())
-    })
-
-})
-
 gulp.task('nunjucks',function(){
    
    return  watch(['./source/template/**/*.html'],function(){
     gulp.src('./source/template/**/*.html')
     .pipe(data(function(){
         return app_data
+        //return JSON.stringify(app_data);
     }))
     .pipe(nunjucksRender({
         path: [
             './source/template/weekThree/'
             ,'./source/template/weekFour/'
-            ,'./source/templates/_layout-w4.html'],
+            ,'./source/template/weekFive/'
+            ,'./source/template/weekFive/material/'
+            ,'./source/templates/_layout-w4.html'
+            ,'./source/templates/_layout-w5.html'
+        ],
         watch: true
       }))
     .pipe(gulp.dest('./public'))

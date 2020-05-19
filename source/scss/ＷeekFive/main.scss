@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import "mixin";
+@import "variable";
+@import "base";
+@import "font";
+
+
+
+.container{
+    height: $layout-height;
+    width: 1200px;
+   
+}
+.header{
+   
+    background-size: cover;
+    background-position: center;
+    @include setWandH(40px,40px);
+    border-radius: 50%;
+}
+
+.side-nav{
+    display: block;
+    background-color: $light-green;
+    height:$layout-height;
+    width: 296px;
+    position: relative;
+    @include padding-t(32px);
+    h1{      
+        @include margin-l(32px);
+        @include margin-b(32px);
+    }
+    ul{
+        padding-left: 0;
+
+        li{
+            margin-bottom: 17px;
+            @include flex();
+            align-items: center;
+            line-height: 40px;
+            a{
+                color:$black;
+                display: block;
+                height: 32px;
+                @include setFontSize(16px,32px);
+               
+            }
+           
+            svg{
+                @include setWandH(24px,24px);
+                margin:0 16px 0 32px;
+            }
+            svg:hover{
+                color:$deep-green;
+            }
+        }
+
+        li:hover{
+            cursor:pointer;
+            box-shadow: inset 2px 0 $deep-green;
+            a{
+                color:$deep-green;
+            }
+
+            svg{
+                fill:$deep-green;
+            }
+        }
+        
+    }
+    
+    .account{
+        position: absolute;
+        bottom: 32px;
+        left: 32px;
+    }
+
+    .user-header{
+        @extend .header;
+        background-image: url("#{$image-path}photo-1514794749374-fb67509dbb7f.jpeg");
+        margin-right:16px;
+       
+    }
+   
+
+}
+
+.top-nav.navbar.navbar-expand-lg.navbar-light.d-flex.align-items-center{
+    padding: 0;
+   
+}
+.top-nav.navbar{
+    width: 950px;
+    height: 96px;
+    .navbar-brand{
+        display: block;
+        @include setFontSize(24px,33px);
+        margin:0 32px 0 46px;
+    }
+
+    .nav-item.dropdown{
+        display: inline;
+
+        a{
+            @include setFontSize(16px,24px);
+            color:$black;
+
+          
+        }
+    }
+
+    .icons{
+        margin-bottom: 0;
+        li:last-child{
+        margin-left:26px;  
+        
+        }
+        svg{
+            @include setWandH(24px,24px);
+        }
+    }
+   
+}
+
+.qty-comments{
+   line-height: 22px;
+   margin-bottom: 8px;
+}
+
+span.drop-down{
+    svg{
+        @include setWandH(24px,24px);
+        margin-left: 7px;
+        fill:$deep-green;
+    }
+
+}
+
+.users-list{
+    width: 320px;
+    margin-left: 32px;
+
+    .sub-title{
+        margin-bottom:6px;
+    }
+    
+}
+
+.reply-area{
+    width: 584px;
+    margin-left: 16px;
+
+}
+
+.list-group{
+    border-radius: 2px;
+    margin: 0;
+}
+
+.list-group-item{
+    border:#CDDDCD 1px solid;
+    color:$black;
+
+    .article-title{
+        margin-top: 5.5px;
+    }
+    
+}
+
+.list-group-item:hover{
+    color:$black;
+}
+
+
+.list-group-item.active{
+    background-color: $light-green;
+    color:$black;
+    border-color:$border-color;
+}
+
+.card{
+    border-top:none;
+    .card-header,.card-body{
+        border-color: $border-color;
+    }
+
+    .card-header{
+        background-color:$light-green;
+        border-top: 1px solid $border-color;
+
+        .article-title{
+            margin-top: 5.5px;
+        }
+      
+    }
+
+    .card-body{
+
+        padding: 16px 16px 12.5px 16px;
+        .author-header{
+            
+            .header-image{
+                @extend .header;
+                background-image: url("#{$image-path}photo-1504051771394-dd2e66b2e08f.jpeg");
+              
+                
+            }
+        }
+        
+        .article-content{
+            margin-left: 8px;
+            margin-right: 16px;
+            border-bottom: 1px solid $border-color;
+            .post-time{
+                margin-bottom: 16px;
+            }
+
+            .text{
+                margin-bottom: 16px;
+            }
+
+            .attachment{
+              
+                @include setWandH(176px,40px);
+                background-color:$light-green;
+                border:1px solid $border-color;
+                margin-bottom: 16.5px;
+                border-radius: 2px;
+                svg{
+                    @include setWandH(24px,24px);
+                    margin-right: 8px;
+                }
+            }
+
+        }
+
+    }
+
+    .edit-area-title{
+        padding: 16px 122px 16px 25px;
+        position: relative;
+        ul {
+            margin:0;
+            padding: 0;
+        }
+        a:hover{
+            color:$text-black;
+        }
+
+       
+    }
+
+    .edit-area-content{
+        padding:16px 24px;
+        height: 263px;
+    }
+
+    .button-area{
+        position: absolute;
+        bottom: 16px;
+        right: 24px;
+
+        input{
+            @include setWandH(112px,35px);
+            border-radius: 2px;
+            
+        }
+
+        .btn-light{
+            border:1px solid $deep-green;
+            background-color:$white;
+            color:$deep-green;
+            margin-right: 8px;
+           
+        }
+
+        .btn-primary{
+            background-color:$deep-green;
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
