@@ -1,0 +1,208 @@
+
+/* Show user modal */
+.modal{
+
+    .modal-body{
+        padding: 32px;
+
+        .modal-user-header{
+            background-image:url("#{$image-path}photo-1522069394066-326005dc26b2.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            @include setWandH(141px,141px);
+
+        }
+
+        .modal-user-data{
+            padding-left: 24px;
+            flex: 1;
+         
+
+            .modal-user-name{
+                margin-bottom: 8px;
+            }
+
+            .modal-user-email{
+                margin-bottom: 15px;
+            }
+
+            .user-others{
+               .user-status{
+                   background-color: $light-green;
+                   padding: 4px 8px;
+                   margin-bottom: 0;
+               }
+
+               .edit-user-button{
+                   background-color:$white;
+                   padding: 0;
+                   transition:all 0.3s;
+                   svg{
+                       fill:$deep-green;
+                   }
+               }
+               .edit-user-button.active{
+                    transform: rotate(180deg);
+               }
+              
+            }
+
+        }
+    }
+
+    .flexible-modal-footer{
+        border-top: none;
+        transition: all 0.5s;
+        height: 0;
+        overflow: hidden;
+        padding: 0 32px;
+    
+        .deactivate-btn{
+            border: 1px solid $border-red;
+            padding-left: 32px;
+            padding-right: 32px;
+            color:$border-red;
+            margin-right: 16px;
+           
+        }
+        .edit-btn{
+          padding-left: 32px;
+          padding-right: 32px;
+          background-color:$deep-green;
+          color:$white;
+          border:none;
+        }
+        
+
+    }
+
+    .modal-footer.active{
+        height: 70px;
+        padding:0 32px 32px 32px;
+    }
+
+}
+
+
+.add-user-modal{
+    // width: 480px;
+
+   .modal-content{
+       width: 480px;
+   }
+   .modal-header{
+      border-bottom: none;
+      padding: 32px;
+    
+   }
+
+   .modal-body{
+       padding:0px 32px;
+   }
+
+   label{
+       margin:0;
+   }
+   .modal-body-title{
+       margin-bottom: 16px;
+   }
+
+   .modal-body-title.title-2{
+       margin-bottom: 15px;
+   }
+
+   .modal-body-title.title-3{
+    margin-bottom: 16px;
+}
+
+
+   .modal-form-input{
+    border-radius: 2px;
+    border: 1px solid #000;
+    padding: 16px;
+    margin:0;
+    margin-bottom: 16px;
+
+   }
+
+
+   .modal-form-input:last-of-type{
+     margin-bottom: 24.5px;
+    }
+
+   hr{
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-bottom: 1px solid $light-green;
+    margin: 1px 0; 
+    padding: 0;
+    margin-bottom: 24.5px;  
+    }      
+
+    .verifity-status{
+      margin-bottom: 18px;
+        svg{
+            @include setWandH(22px,20px);
+            fill:$border-red;
+            margin-right: 9px;
+        }
+       
+    }
+
+    .verifity-mail-btn{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border: 1px solid $light-green;
+        color:$deep-green;
+        margin-bottom: 24.5px;
+       
+    }
+
+    .custom-select.access-level-select{
+        height: 51px;
+        padding-left: 16px;
+        margin-bottom: 24.5px;
+    }
+
+    .form-check-group{
+        margin-bottom: 50px;
+        .custom-control-label{
+           margin-left: 10px;
+           margin-bottom: 16px;
+        }
+
+        .custom-checkbox:last-child{
+            .custom-control-label{
+                margin-bottom: 0;
+            }
+        }
+      
+    }
+
+    .add-user-footer{
+        border:none;
+        padding: 0 32px 16px 32px;
+    }
+
+    .btn-cancel, .btn-add{
+        border: 1px solid $deep-green;
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+    .btn-cancel{
+        color:$deep-green;
+    }
+
+    .btn-add{
+        padding-right: 32px;
+        padding-left: 32px;
+        background-color:$deep-green;
+        color:$white;
+        margin-left: 16px;
+    }
+
+
+}
+

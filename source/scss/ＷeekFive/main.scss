@@ -4,6 +4,7 @@
 @import "variable";
 @import "base";
 @import "font";
+@import "modal";
 
 
 
@@ -91,8 +92,7 @@
    
 }
 .top-nav.navbar{
-    width: 950px;
-    height: 96px;
+   height: 96px;
     .navbar-brand{
         display: block;
         @include setFontSize(24px,33px);
@@ -272,9 +272,7 @@ span.drop-down{
             background-color:$white;
             color:$deep-green;
             margin-right: 8px;
-           
         }
-
         .btn-primary{
             background-color:$deep-green;
         }
@@ -283,6 +281,136 @@ span.drop-down{
 }
 
 
+
+.add-new-admin{  
+    background-color:$white;
+    outline: none;
+
+    .nav-link{
+        padding:0;
+    }
+    .add{
+        padding-bottom:10px;
+       display: block;
+ 
+    }
+
+    svg{
+        margin-left: 8px;
+        fill:$deep-green;
+    }
+
+    .add:hover, svg:hover{
+        color:$deep-green !important;
+        cursor: pointer;
+
+    }
+}
+
+.add-new-admin:hover{
+  
+    color:$deep-green;
+}
+
+
+
+.table{
+    width: 940px;
+    margin-top: 20px;
+    margin-left: 32px;
+    margin:20px 0 70px 32px;
+    thead svg{
+        fill:$deep-green;
+        @include setWandH(20px,20px);
+    }
+   
+    tbody tr:hover{
+        background-color:$light-green;
+    }
+    td, th {
+        border-top: none;
+        border-bottom:1px solid $border-color;
+        padding: 19px 0 13px 0;
+    }
+
+    td:last-child{
+        text-align: right;
+    }
+
+
+    thead th{
+        border-bottom: 1px solid $table-thead-gray;
+        padding: 0;
+    }
+
+    .eye, .create{
+        @include setWandH(25px,25px);
+        display: inline-block;
+        fill:$text-black;
+        margin-left: 25px;
+        cursor: pointer;
+    }
+
+    .eye svg:hover, .create svg:hover{
+        fill:$deep-green;
+    }
+    
+}
+
+.pagination{
+
+    border:1px solid $deep-green;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+    .page-link{ 
+       padding:0;
+       display: block;
+       @include setWandH(32px,32px);
+       line-height: 32px;
+       text-align: center;
+       color:$text-black;
+       border-left: solid 1px $deep-green;
+       
+        svg{
+            @include setWandH(24px,24px);
+            fill:$deep-green;
+            
+        }
+    }
+
+    .page-item:first-child{
+        .page-link{
+            border-left: none;
+        }
+      
+        
+    }
+
+    .page-item.active{
+        .page-link{
+            background-color: $deep-green;
+            color:$white;
+        }
+      
+    }
+    
+
+    .page-item:first-child, .page-item:last-child{
+
+        a{          
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+          
+        }
+        
+
+    }
+}
 
 
 

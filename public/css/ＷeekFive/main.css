@@ -13,6 +13,11 @@ body {
   font-size: 14px;
   line-height: 21px; }
 
+input, button, input:active, button:active, input:focus, button:focus {
+  border: none;
+  box-shadow: none;
+  outline: none; }
+
 a {
   text-decoration: none; }
 
@@ -27,6 +32,42 @@ li {
 
 .margin-center {
   margin: 0 auto; }
+
+.btn, .custom-select {
+  border-radius: 2px;
+  border: 1px solid #000;
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; }
+
+.custom-select {
+  background-image: url("../../src/images/week5/keyboard_arrow_down-24px.svg");
+  background-size: 24px; }
+
+.custom-control-label::before {
+  left: -2rem;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  content: "";
+  background-color: #fff;
+  border: #000 solid 2px; }
+
+.custom-control-label::after {
+  position: absolute;
+  top: .1rem;
+  left: -1.8rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 /* font */
 .chapter, .time {
@@ -51,7 +92,7 @@ li {
 .qty-comments {
   line-height: 12px; }
 
-.author-name-big, .sub-title, .user-name {
+.author-name-big, .sub-title, .table-thead, .page-link-font, .user-id, .user-role, .access-level-select, .table-body, .user-name, .custom-access-checkbox-label {
   font-size: 16px;
   line-height: 24px;
   font-family: Lato;
@@ -60,15 +101,45 @@ li {
 .sub-title {
   line-height: 16px; }
 
+.page-link-font, .user-id, .user-role {
+  font-weight: 400; }
+
+.access-level-select {
+  font-weight: 400;
+  color: #0000009A; }
+
+.table-body {
+  line-height: 19px;
+  font-weight: 500; }
+
 .user-name {
   line-height: 24px; }
 
-.user-mail {
+.user-mail, .modal-user-email, .user-status {
   font-size: 14px;
   line-height: 17px;
   font-family: Lato;
   font-weight: 300;
   color: #0000009A; }
+
+.modal-user-email, .user-status {
+  font-weight: 400;
+  color: #0000009A; }
+
+.modal-body-title {
+  font-size: 20px;
+  line-height: 33px;
+  font-family: Lato;
+  font-weight: 500; }
+
+.user-status {
+  color: #121212; }
+
+.verifity-status {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: Lato;
+  font-weight: 500; }
 
 .text {
   font-size: 14px;
@@ -89,6 +160,162 @@ li {
 .edit-area-font {
   color: #00000062;
   font-weight: 400; }
+
+.modal-user-name {
+  font-size: 24px;
+  line-height: 29px;
+  font-family: Lato;
+  font-weight: 600; }
+
+.modal-form-input {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: Lato;
+  font-weight: 300; }
+
+.custom-access-checkbox-label {
+  font-weight: 400; }
+
+/* Show user modal */
+.modal .modal-body {
+  padding: 32px; }
+  .modal .modal-body .modal-user-header {
+    background-image: url("../../src/images/week5/photo-1522069394066-326005dc26b2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 141px;
+    height: 141px; }
+  .modal .modal-body .modal-user-data {
+    padding-left: 24px;
+    flex: 1; }
+    .modal .modal-body .modal-user-data .modal-user-name {
+      margin-bottom: 8px; }
+    .modal .modal-body .modal-user-data .modal-user-email, .modal .modal-body .modal-user-data .user-status {
+      margin-bottom: 15px; }
+    .modal .modal-body .modal-user-data .user-others .user-status {
+      background-color: #EDF4EE;
+      padding: 4px 8px;
+      margin-bottom: 0; }
+    .modal .modal-body .modal-user-data .user-others .edit-user-button {
+      background-color: #fff;
+      padding: 0;
+      transition: all 0.3s; }
+      .modal .modal-body .modal-user-data .user-others .edit-user-button svg {
+        fill: #2A8356; }
+    .modal .modal-body .modal-user-data .user-others .edit-user-button.active {
+      transform: rotate(180deg); }
+
+.modal .flexible-modal-footer {
+  border-top: none;
+  transition: all 0.5s;
+  height: 0;
+  overflow: hidden;
+  padding: 0 32px; }
+  .modal .flexible-modal-footer .deactivate-btn {
+    border: 1px solid #E3006E;
+    padding-left: 32px;
+    padding-right: 32px;
+    color: #E3006E;
+    margin-right: 16px; }
+  .modal .flexible-modal-footer .edit-btn {
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #2A8356;
+    color: #fff;
+    border: none; }
+
+.modal .modal-footer.active {
+  height: 70px;
+  padding: 0 32px 32px 32px; }
+
+.add-user-modal .modal-content {
+  width: 480px; }
+
+.add-user-modal .modal-header {
+  border-bottom: none;
+  padding: 32px; }
+
+.add-user-modal .modal-body {
+  padding: 0px 32px; }
+
+.add-user-modal label {
+  margin: 0; }
+
+.add-user-modal .modal-body-title {
+  margin-bottom: 16px; }
+
+.add-user-modal .modal-body-title.title-2 {
+  margin-bottom: 15px; }
+
+.add-user-modal .modal-body-title.title-3 {
+  margin-bottom: 16px; }
+
+.add-user-modal .modal-form-input {
+  border-radius: 2px;
+  border: 1px solid #000;
+  padding: 16px;
+  margin: 0;
+  margin-bottom: 16px; }
+
+.add-user-modal .modal-form-input:last-of-type {
+  margin-bottom: 24.5px; }
+
+.add-user-modal hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-bottom: 1px solid #EDF4EE;
+  margin: 1px 0;
+  padding: 0;
+  margin-bottom: 24.5px; }
+
+.add-user-modal .verifity-status {
+  margin-bottom: 18px; }
+  .add-user-modal .verifity-status svg {
+    width: 22px;
+    height: 20px;
+    fill: #E3006E;
+    margin-right: 9px; }
+
+.add-user-modal .verifity-mail-btn {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 1px solid #EDF4EE;
+  color: #2A8356;
+  margin-bottom: 24.5px; }
+
+.add-user-modal .custom-select.access-level-select {
+  height: 51px;
+  padding-left: 16px;
+  margin-bottom: 24.5px; }
+
+.add-user-modal .form-check-group {
+  margin-bottom: 50px; }
+  .add-user-modal .form-check-group .custom-control-label {
+    margin-left: 10px;
+    margin-bottom: 16px; }
+  .add-user-modal .form-check-group .custom-checkbox:last-child .custom-control-label {
+    margin-bottom: 0; }
+
+.add-user-modal .add-user-footer {
+  border: none;
+  padding: 0 32px 16px 32px; }
+
+.add-user-modal .btn-cancel, .add-user-modal .btn-add {
+  border: 1px solid #2A8356;
+  padding-right: 32px;
+  padding-left: 32px; }
+
+.add-user-modal .btn-cancel {
+  color: #2A8356; }
+
+.add-user-modal .btn-add {
+  padding-right: 32px;
+  padding-left: 32px;
+  background-color: #2A8356;
+  color: #fff;
+  margin-left: 16px; }
 
 .container {
   height: 100vh;
@@ -149,7 +376,6 @@ li {
   padding: 0; }
 
 .top-nav.navbar {
-  width: 950px;
   height: 96px; }
   .top-nav.navbar .navbar-brand {
     display: block;
@@ -266,3 +492,80 @@ span.drop-down svg {
       margin-right: 8px; }
     .card .button-area .btn-primary {
       background-color: #2A8356; }
+
+.add-new-admin {
+  background-color: #fff;
+  outline: none; }
+  .add-new-admin .nav-link {
+    padding: 0; }
+  .add-new-admin .add {
+    padding-bottom: 10px;
+    display: block; }
+  .add-new-admin svg {
+    margin-left: 8px;
+    fill: #2A8356; }
+  .add-new-admin .add:hover, .add-new-admin svg:hover {
+    color: #2A8356 !important;
+    cursor: pointer; }
+
+.add-new-admin:hover {
+  color: #2A8356; }
+
+.table {
+  width: 940px;
+  margin-top: 20px;
+  margin-left: 32px;
+  margin: 20px 0 70px 32px; }
+  .table thead svg {
+    fill: #2A8356;
+    width: 20px;
+    height: 20px; }
+  .table tbody tr:hover {
+    background-color: #EDF4EE; }
+  .table td, .table th {
+    border-top: none;
+    border-bottom: 1px solid #CDDDCD;
+    padding: 19px 0 13px 0; }
+  .table td:last-child {
+    text-align: right; }
+  .table thead th {
+    border-bottom: 1px solid #121212;
+    padding: 0; }
+  .table .eye, .table .create {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    fill: #121212;
+    margin-left: 25px;
+    cursor: pointer; }
+  .table .eye svg:hover, .table .create svg:hover {
+    fill: #2A8356; }
+
+.pagination {
+  border: 1px solid #2A8356;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .pagination .page-link {
+    padding: 0;
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #121212;
+    border-left: solid 1px #2A8356; }
+    .pagination .page-link svg {
+      width: 24px;
+      height: 24px;
+      fill: #2A8356; }
+  .pagination .page-item:first-child .page-link {
+    border-left: none; }
+  .pagination .page-item.active .page-link {
+    background-color: #2A8356;
+    color: #fff; }
+  .pagination .page-item:first-child a, .pagination .page-item:last-child a {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
