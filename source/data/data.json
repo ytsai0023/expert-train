@@ -7,6 +7,10 @@
     "path":{
       "svg_path":"../src/images/",
       "image_path":"../src/images/"
+    },
+    "week5_data":{
+      "name1":"Emir Wicks",
+      "email1":"emir.wicks@mail.com"
     }
 
   

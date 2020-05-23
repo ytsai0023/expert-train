@@ -1,0 +1,58 @@
+{% extends "_layoutModal.html" %}
+
+{% block ModalId %}
+"editModal"
+{% endblock %}
+
+  {% block modalTitle %}
+    Edit Admin
+  {% endblock %}
+  {% block modalTextInput %}
+
+    <label for="">Name</label><input class="modal-edit-form-input registed" type="text" value={{ week5_data.name1 }}>
+    <label for="">Email</label><input class="modal-edit-form-input registed" type="text" value={{ week5_data.email1}}>
+  {% endblock %}  
+  {% block verification %}
+  <p class="verifity-status verified d-flex justify-content-between">
+    <span>
+    {% include "check_circle-24px.svg" %}
+    Verified
+    </span>
+    <span class="verified-date">
+      2020/4/12
+    </span>
+  </p>  
+  {% endblock %}  
+
+  {% block verifyMail %} 
+    verify-mail
+  {% endblock %}
+  {% block accessLevel %}
+  <select class="select custom-select  access-level-select">
+    <option>-Choose access level-</option>
+    <option value="1" selected>Admin</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  {% endblock %}
+  
+  {% block DeactivateAccount %}
+  <div class ="deactivate-block">
+    <hr class="deactivate-hr">
+    <p class="modal-body-title title-4">Deactivate Account</p>
+    <p class="verifity-status deactivate-alarm">
+      <span>
+      {% include "warning-24px.svg" %}
+      This cannot be undone!
+    </span>
+    </p>    
+    <button type="submit" class="btn btn-deactivate">
+      Deactivate This Account
+    </button>
+  </div>
+ 
+  {% endblock %}
+  {% block button %}
+  <button type="submit" class="btn btn-add">Update</button>
+  {% endblock %}
+       

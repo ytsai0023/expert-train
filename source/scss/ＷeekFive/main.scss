@@ -196,22 +196,27 @@ span.drop-down{
     }
 
     .card-body{
+        padding: 16px 16px 23px 16px;
+        .article{
+            margin-bottom: 16px;
+        }
 
-        padding: 16px 16px 12.5px 16px;
         .author-header{
-            
-            .header-image{
+            width: 100px;
+            .head-image{
                 @extend .header;
-                background-image: url("#{$image-path}photo-1504051771394-dd2e66b2e08f.jpeg");
-              
-                
+                // background-image: url("#{$image-path}photo-1504051771394-dd2e66b2e08f.jpeg");
             }
+            
+
+            
         }
         
         .article-content{
             margin-left: 8px;
             margin-right: 16px;
             border-bottom: 1px solid $border-color;
+            padding-bottom: 16px;
             .post-time{
                 margin-bottom: 16px;
             }
@@ -225,7 +230,7 @@ span.drop-down{
                 @include setWandH(176px,40px);
                 background-color:$light-green;
                 border:1px solid $border-color;
-                margin-bottom: 16.5px;
+                // margin-bottom: 16.5px;
                 border-radius: 2px;
                 svg{
                     @include setWandH(24px,24px);
@@ -235,6 +240,13 @@ span.drop-down{
 
         }
 
+        .article:last-child{
+            margin-bottom: 0;
+            .article-content{
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
     }
 
     .edit-area-title{

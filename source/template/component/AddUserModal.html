@@ -1,0 +1,38 @@
+{% extends "_layoutModal.html" %}
+
+{% block ModalId %}
+"addUserModal"
+{% endblock %}
+
+          {% block modalTitle %}
+            New Admin
+          {% endblock %}
+          {% block modalTextInput %}
+            <label for="">Name</label><input class="modal-form-input" type="text">
+            <label for="">Email</label><input class="modal-form-input" type="text">
+          {% endblock %}  
+          {% block verification %}
+          <p class="verifity-status unverified">
+            <span>
+            {% include "warning-24px.svg" %}
+            Unverified
+          </span>
+          </p>    
+          {% endblock %}  
+          {% block accessLevel %}
+          <select class="select custom-select  access-level-select">
+            <option selected >-Choose access level-</option>
+            <option value="1">Admin</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          {% endblock %}
+          {% block DeactivateAccount %}
+          <div class ="deactivate-block-space">
+
+          </div>
+          {% endblock %}
+          {% block button %}
+          <button type="submit" class="btn btn-add">Add</button>
+          {% endblock %}
+       

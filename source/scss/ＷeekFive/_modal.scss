@@ -126,6 +126,15 @@
 
    }
 
+   .modal-edit-form-input{
+       @extend .modal-form-input;
+       font-weight: 400;
+   }
+
+   .modal-form-input.registed{
+     background-color: $light-green;
+     border-color: $light-green;
+   }
 
    .modal-form-input:last-of-type{
      margin-bottom: 24.5px;
@@ -143,13 +152,27 @@
 
     .verifity-status{
       margin-bottom: 18px;
+        &.unverified svg{
+            fill:$border-red;    
+        }
+
+        &.verified svg{
+            fill:$deep-green;
+        }
+
+        &.deactivate-alarm{
+            color:$border-red;
+            svg{
+                fill:$border-red;
+            }
+        }
+
         svg{
             @include setWandH(22px,20px);
-            fill:$border-red;
             margin-right: 9px;
         }
-       
     }
+
 
     .verifity-mail-btn{
         padding-top: 16px;
@@ -157,6 +180,10 @@
         border: 1px solid $light-green;
         color:$deep-green;
         margin-bottom: 24.5px;
+
+        &.verify-mail{
+            color:$light-green;
+        }
        
     }
 
@@ -167,7 +194,6 @@
     }
 
     .form-check-group{
-        margin-bottom: 50px;
         .custom-control-label{
            margin-left: 10px;
            margin-bottom: 16px;
@@ -203,6 +229,25 @@
         margin-left: 16px;
     }
 
+}
 
+.deactivate-block-space{
+    height: 50px;
+}
+
+.deactivate-block{
+    margin-top:24.5px;
+    margin-bottom: 48px;
+    .deactivate-hr{
+        margin-bottom: 24.5px;
+    }
+
+    .btn-deactivate{
+        padding-top:16px;
+        padding-bottom: 16px;
+        width: 100%;
+        border:1px solid $border-red;
+        color:$border-red;
+    }
 }
 

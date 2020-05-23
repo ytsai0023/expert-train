@@ -1,5 +1,5 @@
 <!-- Show User -->
-
+{% extends "_layoutModal.html" %}
 <div class="modal fade show-user-modal" id="userModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -10,7 +10,7 @@
               <p>#1</p> 
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+                  {% include "close-24px.svg" %}
                 </span>
               </button>
             </div>
@@ -20,7 +20,7 @@
             <div class="user-others d-flex justify-content-between ">
                 <spna class="user-status">Verified</spna>
                 <button class="edit-user-button" id="modal_edit">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                  {% include "keyboard_arrow_down-24px.svg"%}
                 </button>
             </div>
   

@@ -1,0 +1,103 @@
+
+  <div class="modal fade add-user-modal" id=
+"editModal"
+ tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">
+            
+    Edit Admin
+  
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"> <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span>
+          </button>
+        </div>
+        <form action="">
+        <div class="modal-body d-flex flex-column">
+          <p class="modal-body-title">Account</p>  
+          
+
+    <label for="">Name</label><input class="modal-edit-form-input registed" type="text" value=Emir Wicks>
+    <label for="">Email</label><input class="modal-edit-form-input registed" type="text" value=emir.wicks@mail.com>
+  
+          <hr>
+          <p class="modal-body-title title-2">Verification</p> 
+          
+  <p class="verifity-status verified d-flex justify-content-between">
+    <span>
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+    Verified
+    </span>
+    <span class="verified-date">
+      2020/4/12
+    </span>
+  </p>  
+  
+          <button class="btn verifity-mail-btn  
+    verify-mail
+  ">Send Verification Mail</button>
+          <hr>
+          <p class="modal-body-title title-2">Access Level</p> 
+          
+  <select class="select custom-select  access-level-select">
+    <option>-Choose access level-</option>
+    <option value="1" selected>Admin</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  
+          <hr>
+          <p class="modal-body-title title-3">Custom Access</p>
+          <div class="form-check-group flex-column">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+              <label class="custom-control-label custom-access-checkbox-label" for="customCheck">Lecture</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck2" name="example1">
+              <label class="custom-control-label custom-access-checkbox-label" for="customCheck2">Coupon</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck3" name="example1">
+              <label class="custom-control-label custom-access-checkbox-label" for="customCheck3">Message</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck4" name="example1">
+              <label class="custom-control-label custom-access-checkbox-label" for="customCheck4">Setting</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck5" name="example1">
+              <label class="custom-control-label custom-access-checkbox-label" for="customCheck5">Task menu</label>
+            </div>
+          </div>
+          
+  <div class ="deactivate-block">
+    <hr class="deactivate-hr">
+    <p class="modal-body-title title-4">Deactivate Account</p>
+    <p class="verifity-status deactivate-alarm">
+      <span>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+      This cannot be undone!
+    </span>
+    </p>    
+    <button type="submit" class="btn btn-deactivate">
+      Deactivate This Account
+    </button>
+  </div>
+ 
+  
+
+        </div>
+        <div class="modal-footer add-user-footer">
+          <button type="button" class="btn btn-cancel">Cancel</button>
+          
+  <button type="submit" class="btn btn-add">Update</button>
+  
+        </div>
+      </form>
+      </div>         
+    </div>
+  </div>

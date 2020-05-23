@@ -1,0 +1,71 @@
+
+  <div class="modal fade add-user-modal" id={% block ModalId %}{% endblock %} tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">
+            {% block modalTitle %}
+
+            {% endblock %}
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"> {% include "close-24px.svg" %}</span>
+          </button>
+        </div>
+        <form action="">
+        <div class="modal-body d-flex flex-column">
+          <p class="modal-body-title">Account</p>  
+          {% block modalTextInput %}
+
+          {% endblock %}
+          <hr>
+          <p class="modal-body-title title-2">Verification</p> 
+          {% block verification %}
+
+          {% endblock %}
+          <button class="btn verifity-mail-btn {% block verifyMail %} {% endblock %}">Send Verification Mail</button>
+          <hr>
+          <p class="modal-body-title title-2">Access Level</p> 
+          {% block accessLevel %}
+
+          {% endblock %}
+          <hr>
+          <p class="modal-body-title title-3">Custom Access</p>
+          <div class="form-check-group flex-column">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+              <label class="custom-control-label custom-access-checkbox-label" for="customCheck">Lecture</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck2" name="example1">
+              <label class="custom-control-label custom-access-checkbox-label" for="customCheck2">Coupon</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck3" name="example1">
+              <label class="custom-control-label custom-access-checkbox-label" for="customCheck3">Message</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck4" name="example1">
+              <label class="custom-control-label custom-access-checkbox-label" for="customCheck4">Setting</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck5" name="example1">
+              <label class="custom-control-label custom-access-checkbox-label" for="customCheck5">Task menu</label>
+            </div>
+          </div>
+          {% block DeactivateAccount %}
+
+          {% endblock %}
+
+        </div>
+        <div class="modal-footer add-user-footer">
+          <button type="button" class="btn btn-cancel">Cancel</button>
+          {% block button %}
+
+          {% endblock %}
+        </div>
+      </form>
+      </div>         
+    </div>
+  </div>

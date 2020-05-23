@@ -1,0 +1,27 @@
+
+<div class="article d-flex">
+    <div class="author-header">
+
+    <div class="head-image"
+        style="background-image: url('../src/images/week5/{% block authorHeadUrl %}{% endblock %}');"> 
+    </div>  
+                
+    </div>
+    <div class="article-content">
+      <div class="article-nav">
+        <div class="article-author-data">
+            <div class="author-name-big">{% block authorName %}{% endblock%}</div>
+            <div class="post-time">{% block postTime %}{% endblock%}</div>
+        </div>
+        <div class="article-utility">
+            {% block postUtility %}{% endblock%}
+        </div>
+        
+      </div>  
+      <div class="text">
+        {% block articleContent %}{% endblock%}
+      </div>
+      {% block attachment %}{% endblock%}
+    
+    </div>
+  </div>

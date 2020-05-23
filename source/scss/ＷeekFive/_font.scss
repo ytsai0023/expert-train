@@ -36,6 +36,7 @@ $formal-light-height:15px;
     @include setFontStyle($font-loto,600);
 }
 
+
 .sub-title{
     @extend .author-name-big;
     line-height: 16px;
@@ -141,10 +142,16 @@ $formal-light-height:15px;
     @include setFontSize(16px,19px);
     @include setFontStyle($font-loto,300);
 }
+.modal-edit-form-input{
+    @extend .author-name-big;
+    font-weight: 500
+
+}
 
 .custom-access-checkbox-label{
     @extend .author-name-big;
     font-weight: 400;
+    
 }
 
 

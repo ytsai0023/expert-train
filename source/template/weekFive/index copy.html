@@ -78,13 +78,39 @@ All Courses
                   {% include "tententen.svg" %}
                 </div>
               </div>
-              <div class="card-body d-flex flex-column">
-                {% include "../component/studentPost.html" %}
-                {% include "../component/teacherPost.html" %}
-                
+              <div class="card-body d-flex">
+                <div class="author-header d-flex flex-column align-items-center">  
+                  <div class="header-image"></div>             
+                </div>
+                <div class="article-content">
+                  <div class="author-name-big">Emily Wang</div>
+                  <div class="post-time">10:38 AM (4 hours ago)</div>
+                  <div class="text">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the div is bigger than the height of the img ? There is a gap below the image, but it doesn’t seems to be a padding/margin. What is the gap or extra space below image?</div>
+                  <a class="attachment d-block d-flex align-items-center justify-content-center">
+                    {% include "attach_file-24px.svg"%}
+                    HW-2-David.zip
+                  </a>
+                </div>
               </div> 
-      
-              
+              <div class="card-header edit-area-title">
+                <ul class="d-flex align-items-center justify-content-around">
+                  <li><a class="article-title" href="">Body Text {% include "arrow_drop_down-24px.svg" %}</a></li>
+                  <li><a href="">{% include "format_bold-24px.svg" %}</a></li>
+                  <li><a href="">{% include "format_italic-24px.svg" %}</a></li>
+                  <li><a href="">{% include "format_list_bulleted-24px.svg" %}</a></li>
+                  <li><a href="">{% include "format_list_numbered-24px.svg" %}</a></li>
+                  <li><a href="">{% include "insert_photo-24px.svg" %}</a></li>
+                  <li><a href="">{% include "insert_link-24px.svg" %}</a></li>
+                  <li><a href="">{% include "code-24px.svg" %}</a></li>
+                </ul>   
+              </div>
+              <div class="card-body edit-area-content">
+               <p class="edit-area-font">Reply an answer…</p>
+               <div class="button-area">
+                <input type="button" class="btn btn-light" value="Cancel">
+                <input type="submit" class="btn btn-primary" value="Reply">
+               </div>
+             
               </div> 
           </div>
 
