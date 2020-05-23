@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "mixin";
 @import "variable";
-@import "base";
 @import "font";
+@import "base";
+@import "utility";
 @import "modal";
 
 
@@ -147,9 +148,10 @@ span.drop-down{
     
 }
 
-.reply-area{
+.post-area{
     width: 584px;
     margin-left: 16px;
+    position: relative;
 
 }
 
@@ -205,11 +207,7 @@ span.drop-down{
             width: 100px;
             .head-image{
                 @extend .header;
-                // background-image: url("#{$image-path}photo-1504051771394-dd2e66b2e08f.jpeg");
             }
-            
-
-            
         }
         
         .article-content{
@@ -217,6 +215,13 @@ span.drop-down{
             margin-right: 16px;
             border-bottom: 1px solid $border-color;
             padding-bottom: 16px;
+
+            .article-utility{
+                button{
+                    width: 24px;
+                    margin-left: 24px;
+                }
+            }
             .post-time{
                 margin-bottom: 16px;
             }
@@ -238,57 +243,53 @@ span.drop-down{
                 }
             }
 
-        }
+            
 
+        }
+       
         .article:last-child{
             margin-bottom: 0;
+
             .article-content{
                 border-bottom: 0;
                 padding-bottom: 0;
+                .text{
+                    margin-bottom: 0;;
+                }
             }
         }
     }
 
-    .edit-area-title{
-        padding: 16px 122px 16px 25px;
-        position: relative;
-        ul {
-            margin:0;
-            padding: 0;
-        }
-        a:hover{
-            color:$text-black;
-        }
+  
+}
 
-       
-    }
+.post-button-group{
+    padding-top: 16px;
 
-    .edit-area-content{
-        padding:16px 24px;
-        height: 263px;
-    }
-
-    .button-area{
-        position: absolute;
-        bottom: 16px;
-        right: 24px;
-
-        input{
-            @include setWandH(112px,35px);
-            border-radius: 2px;
-            
-        }
-
-        .btn-light{
-            border:1px solid $deep-green;
-            background-color:$white;
-            color:$deep-green;
-            margin-right: 8px;
-        }
-        .btn-primary{
-            background-color:$deep-green;
+    .switch-page{
+        line-height: 35px;
+        button{
+            margin-right: 20px;
+            @include setWandH(24px,24px);
         }
         
+    }
+    .btn-group{ 
+            button{
+                padding-left: 32px;
+                padding-right: 32px;
+                border: 1px solid $deep-green;
+            }
+            & .mark-as-read{
+                color:$deep-green;
+                
+            }
+
+            & .reply{
+                background-color:$deep-green;
+                color:$white;
+                margin-left: 16px;
+            }
     }
 }
 
@@ -331,6 +332,7 @@ span.drop-down{
     margin-top: 20px;
     margin-left: 32px;
     margin:20px 0 70px 32px;
+
     thead svg{
         fill:$deep-green;
         @include setWandH(20px,20px);
@@ -424,6 +426,78 @@ span.drop-down{
     }
 }
 
+.post-reply-container{
+
+    width: 100%;
+    height:50%;
+    border: 1px solid $light-green;
+    border-radius: 0px 0px 2px 2px;
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background-color:$white;
+    z-index: 999;
+    
+    .edit-area-title{
+        padding: 16px 122px 16px 25px;
+        position: relative;
+        background-color: $light-green;
+        border-bottom:1px solid $light-green;
+
+        ul {
+            margin:0;
+            padding: 0;
+        }
+        a:hover{
+            color:$text-black;
+        }
+
+       
+    }
+
+    .edit-area-content{
+        padding:16px 24px;
+        height: 263px;
+    }
+
+
+    .button-group{
+        position: absolute;
+        bottom:16px;
+        right:24px;
+
+        button{
+            @include setWandH(112px,35px);
+            border-radius: 2px;
+            border:1px solid $deep-green;
+            
+        }
+
+        .btn-cancel{
+            border:1px solid $deep-green;
+            background-color:$white;
+            color:$deep-green;
+            margin-right: 8px;
+        }
+        .btn-reply{
+            background-color:$deep-green;
+            color:$white;
+        }
+        
+    }
+
+}
+
+.hide{
+    transform: scale(0);
+}
+
+.show{
+    transform: scale(1);
+    transform-origin: 100% 100%;
+    transition: transform .5s;
+}
 
 
 

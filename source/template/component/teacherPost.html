@@ -8,6 +8,9 @@ Andy Chen (You)
 13:24 AM (1 hours ago)
 {% endblock%}
 {% block postUtility %}
+    <button id="favor-article">{% include "star_border-24px.svg" %}</button> 
+    <button id="edit-article">{% include "create-24px.svg" %}</button> 
+
 {% endblock%}
 {% block articleContent %}
 Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.
@@ -16,8 +19,8 @@ Hi David, by default, an image is rendered inline, like a letter so it sits on t
 You can: 　
 <br>
 <br>
-• adjust the vertical-align of the image to position it elsewhere (e.g. the middle )  <br>
-• change the display so it isn’t inline.
+• adjust the <span class="badge badge-light">vertical-align</span> of the image to position it elsewhere (e.g. the <span class="badge badge-light">middle</span> )  <br>
+• change the <span class="badge badge-light">display</span> so it isn’t inline.
 {% endblock%}
 {% block attachment %}
 

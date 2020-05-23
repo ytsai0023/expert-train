@@ -47,6 +47,14 @@ $formal-light-height:15px;
     @extend .author-name-big;
 }
 
+.table-body{
+    th{
+        @extend .author-name-big;
+        font-weight: 400;
+
+    }
+}
+
 .page-link-font{
     @extend .author-name-big;
     font-weight: 400;
@@ -112,6 +120,13 @@ $formal-light-height:15px;
     @include setFontStyle($font-loto,400);
     @include margin-zero();
     color:$text-black;
+}
+
+.badge{
+    @extend .text;
+
+    font-family: $font-roboto;
+    font-weight: 300;
 }
 
 

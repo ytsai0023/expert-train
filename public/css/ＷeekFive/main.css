@@ -1,74 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-html {
-  box-sizing: border-box; }
-
-body {
-  font-family: 'Roboto', 'Lato',serif;
-  font-size: 14px;
-  line-height: 21px; }
-
-input, button, input:active, button:active, input:focus, button:focus {
-  border: none;
-  box-shadow: none;
-  outline: none; }
-
-a {
-  text-decoration: none; }
-
-p {
-  margin: 0; }
-
-a:hover {
-  text-decoration: none; }
-
-li {
-  list-style: none; }
-
-.margin-center {
-  margin: 0 auto; }
-
-.btn, .custom-select {
-  border-radius: 2px;
-  border: 1px solid #000;
-  padding: 8px 0;
-  font-size: 16px;
-  line-height: 19px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0; }
-
-.custom-select {
-  background-image: url("../../src/images/week5/keyboard_arrow_down-24px.svg");
-  background-size: 24px; }
-
-.custom-control-label::before {
-  left: -2rem;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  pointer-events: none;
-  content: "";
-  background-color: #fff;
-  border: #000 solid 2px; }
-
-.custom-control-label::after {
-  position: absolute;
-  top: .1rem;
-  left: -1.8rem;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  content: "";
-  background-repeat: no-repeat;
-  background-size: contain; }
-
 /* font */
 .chapter, .time {
   font-size: 12px;
@@ -92,7 +23,7 @@ li {
 .qty-comments {
   line-height: 12px; }
 
-.author-name-big, .sub-title, .table-thead, .page-link-font, .user-id, .user-role, .access-level-select, .table-body, .user-name, .modal-edit-form-input, .custom-access-checkbox-label {
+.author-name-big, .sub-title, .table-thead, .table-body th, .page-link-font, .user-id, .user-role, .access-level-select, .table-body, .user-name, .modal-edit-form-input, .custom-access-checkbox-label {
   font-size: 16px;
   line-height: 24px;
   font-family: Lato;
@@ -100,6 +31,9 @@ li {
 
 .sub-title {
   line-height: 16px; }
+
+.table-body th {
+  font-weight: 400; }
 
 .page-link-font, .user-id, .user-role {
   font-weight: 400; }
@@ -141,13 +75,17 @@ li {
   font-family: Lato;
   font-weight: 500; }
 
-.text {
+.text, .badge {
   font-size: 14px;
   line-height: 21px;
   font-family: Lato;
   font-weight: 400;
   margin: 0;
   color: #121212; }
+
+.badge {
+  font-family: Roboto;
+  font-weight: 300; }
 
 .article-title, .attachment, .edit-area-font {
   font-size: 16px;
@@ -178,6 +116,86 @@ li {
 
 .custom-access-checkbox-label {
   font-weight: 400; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', 'Lato',serif;
+  font-size: 14px;
+  line-height: 21px; }
+
+input, button, input:active, button:active, input:focus, button:focus {
+  border: none;
+  box-shadow: none;
+  outline: none; }
+
+a {
+  text-decoration: none; }
+
+p {
+  margin: 0; }
+
+a:hover {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+/*bootstrap component */
+.margin-center {
+  margin: 0 auto; }
+
+.btn, .custom-select {
+  border-radius: 2px;
+  border: 1px solid #000;
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; }
+
+.btn:focus, .custom-select:focus {
+  box-shadow: none;
+  outline: none; }
+
+.custom-select {
+  background-image: url("../../src/images/week5/keyboard_arrow_down-24px.svg");
+  background-size: 24px; }
+
+.custom-control-label::before {
+  left: -2rem;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  content: "";
+  background-color: #fff;
+  border: #000 solid 2px; }
+
+.custom-control-label::after {
+  position: absolute;
+  top: .1rem;
+  left: -1.8rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.badge {
+  color: #2A8356; }
+  .badge.badge-light {
+    margin-bottom: 0 !important;
+    background-color: #EDF4EE; }
 
 /* Show user modal */
 .modal .modal-body {
@@ -445,9 +463,10 @@ span.drop-down svg {
   .users-list .sub-title {
     margin-bottom: 6px; }
 
-.reply-area {
+.post-area {
   width: 584px;
-  margin-left: 16px; }
+  margin-left: 16px;
+  position: relative; }
 
 .list-group {
   border-radius: 2px;
@@ -487,9 +506,12 @@ span.drop-down svg {
       margin-right: 16px;
       border-bottom: 1px solid #CDDDCD;
       padding-bottom: 16px; }
+      .card .card-body .article-content .article-utility button {
+        width: 24px;
+        margin-left: 24px; }
       .card .card-body .article-content .post-time {
         margin-bottom: 16px; }
-      .card .card-body .article-content .text {
+      .card .card-body .article-content .text, .card .card-body .article-content .badge {
         margin-bottom: 16px; }
       .card .card-body .article-content .attachment {
         width: 176px;
@@ -506,32 +528,27 @@ span.drop-down svg {
       .card .card-body .article:last-child .article-content {
         border-bottom: 0;
         padding-bottom: 0; }
-  .card .edit-area-title {
-    padding: 16px 122px 16px 25px;
-    position: relative; }
-    .card .edit-area-title ul {
-      margin: 0;
-      padding: 0; }
-    .card .edit-area-title a:hover {
-      color: #121212; }
-  .card .edit-area-content {
-    padding: 16px 24px;
-    height: 263px; }
-  .card .button-area {
-    position: absolute;
-    bottom: 16px;
-    right: 24px; }
-    .card .button-area input {
-      width: 112px;
-      height: 35px;
-      border-radius: 2px; }
-    .card .button-area .btn-light {
-      border: 1px solid #2A8356;
-      background-color: #fff;
-      color: #2A8356;
-      margin-right: 8px; }
-    .card .button-area .btn-primary {
-      background-color: #2A8356; }
+        .card .card-body .article:last-child .article-content .text, .card .card-body .article:last-child .article-content .badge {
+          margin-bottom: 0; }
+
+.post-button-group {
+  padding-top: 16px; }
+  .post-button-group .switch-page {
+    line-height: 35px; }
+    .post-button-group .switch-page button {
+      margin-right: 20px;
+      width: 24px;
+      height: 24px; }
+  .post-button-group .btn-group button {
+    padding-left: 32px;
+    padding-right: 32px;
+    border: 1px solid #2A8356; }
+  .post-button-group .btn-group .mark-as-read {
+    color: #2A8356; }
+  .post-button-group .btn-group .reply {
+    background-color: #2A8356;
+    color: #fff;
+    margin-left: 16px; }
 
 .add-new-admin {
   background-color: #fff;
@@ -609,3 +626,53 @@ span.drop-down svg {
     display: flex;
     align-items: center;
     justify-content: center; }
+
+.post-reply-container {
+  width: 100%;
+  height: 50%;
+  border: 1px solid #EDF4EE;
+  border-radius: 0px 0px 2px 2px;
+  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999; }
+  .post-reply-container .edit-area-title {
+    padding: 16px 122px 16px 25px;
+    position: relative;
+    background-color: #EDF4EE;
+    border-bottom: 1px solid #EDF4EE; }
+    .post-reply-container .edit-area-title ul {
+      margin: 0;
+      padding: 0; }
+    .post-reply-container .edit-area-title a:hover {
+      color: #121212; }
+  .post-reply-container .edit-area-content {
+    padding: 16px 24px;
+    height: 263px; }
+  .post-reply-container .button-group {
+    position: absolute;
+    bottom: 16px;
+    right: 24px; }
+    .post-reply-container .button-group button {
+      width: 112px;
+      height: 35px;
+      border-radius: 2px;
+      border: 1px solid #2A8356; }
+    .post-reply-container .button-group .btn-cancel {
+      border: 1px solid #2A8356;
+      background-color: #fff;
+      color: #2A8356;
+      margin-right: 8px; }
+    .post-reply-container .button-group .btn-reply {
+      background-color: #2A8356;
+      color: #fff; }
+
+.hide {
+  transform: scale(0); }
+
+.show {
+  transform: scale(1);
+  transform-origin: 100% 100%;
+  transition: transform .5s; }
