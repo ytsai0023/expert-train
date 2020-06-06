@@ -31,6 +31,7 @@ gulp.task('nunjucks',function(){
             ,'./source/template/weekFour/'
             ,'./source/template/weekFive/'
             ,'./source/template/weekFive/material/'
+            ,'./source/template/weekSix/asset/'
             ,'./source/templates/_layout-w4.html'
             ,'./source/templates/_layout-w5.html'
             , './source/template/component/'

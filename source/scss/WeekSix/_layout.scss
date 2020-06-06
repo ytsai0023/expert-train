@@ -1,0 +1,22 @@
+// spacers
+//4 0.25
+//24 1.5
+//48 3
+//18 1.125
+//16 1
+//72 4.5
+//32 2
+//$spacers: map-merge( ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 3)), $spacers);
+header {
+    // background-color: #7d7d7d;
+}
+
+main {}
+
+footer {
+    // background-color: pink;
+}
+
+.test {
+    border: 1px solid #000;
+}
