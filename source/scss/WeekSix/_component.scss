@@ -1,3 +1,15 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+}
+
 .footer-jumbotron {
     background-image:url("#{$image-path}tom-crew-uDF1mW7EUwM-unsplash.jpg");
     background-size: cover;
@@ -8,13 +20,13 @@
     @media screen and (max-width: 768px) {
         height: 224px;
         position: relative;
-        .jumbotronMask {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background-color: #000;
-            opacity: 0.38;
-        }
+        // .jumbotronMask {
+        //     position: absolute;
+        //     height: 100%;
+        //     width: 100%;
+        //     background-color: #000;
+        //     opacity: 0.38;
+        // }
     }
     .slogan {
         font-size: 3rem;
@@ -27,6 +39,18 @@
             font-weight: 500;
             margin-bottom: 1.5rem;
         }
+    }
+}
+
+.mask {
+    @media screen and (max-width: 768px) {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        opacity: 0.38;
     }
 }
 
@@ -85,7 +109,6 @@ footer {
 
 .mainContent {
     position: relative;
-    // height: 50rem;
     .mainBackground {
         background-image: url("#{$image-path}tom-crew-5HRCkrSs9Dk-unsplash.jpg");
         position: absolute;

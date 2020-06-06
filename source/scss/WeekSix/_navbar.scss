@@ -272,12 +272,16 @@
     }
     .navbar-nav {
         .nav-link {
-            color: $navbar-light-color;
+            // color: $navbar-light-color;
+            color: $white;
+            font-weight: 200;
             @include hover-focus() {
-                color: $navbar-light-hover-color;
+                // color: $navbar-light-hover-color;
+                color: $white;
             }
             &.disabled {
-                color: $navbar-light-disabled-color;
+                // color: $navbar-light-disabled-color;
+                color: $white;
             }
         }
         .show>.nav-link,
