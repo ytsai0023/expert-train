@@ -11,22 +11,16 @@ main {
 }
 
 .footer-jumbotron {
+    display: block;
     background-image:url("#{$image-path}tom-crew-uDF1mW7EUwM-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 500px;
+    // height: 500px;
     color: white;
     @media screen and (max-width: 768px) {
         height: 224px;
         position: relative;
-        // .jumbotronMask {
-        //     position: absolute;
-        //     height: 100%;
-        //     width: 100%;
-        //     background-color: #000;
-        //     opacity: 0.38;
-        // }
     }
     .slogan {
         font-size: 3rem;
@@ -116,9 +110,12 @@ footer {
         bottom: 0;
         background-size: cover;
         background-position: center center;
-        @media only screen and (max-width: 768px) {}
+        height: 50rem;
+        @media only screen and (max-width: 768px) {
+            height: 40rem;
+        }
     }
-    .row:first-child {
+    section:first-child .row:first-child {
         height: 50rem;
     }
     @media only screen and (max-width: 768px) {
@@ -158,6 +155,34 @@ footer {
         }
         button {
             margin-bottom: 1.5rem !important;
+        }
+    }
+}
+
+.propagandaList {
+    @media only screen and (max-width: 768px) {
+        margin-top: 3rem;
+    }
+    .row {
+        .col-md-6 {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            img {
+                width: 95%;
+                height: 400px;
+            }
+        }
+        .col-md-4 {
+            p {
+                font-weight: 300;
+                color: #0000009A;
+            }
+            @media only screen and (max-width: 768px) {
+                h4 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+            }
         }
     }
 }
