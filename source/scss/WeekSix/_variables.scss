@@ -76,7 +76,7 @@ $enable-deprecation-messages: true !default;
 $spacer: 1rem !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$spacers: map-merge( ( 0: 0, 1: ($spacer * .25), 2: ($spacer * 1.5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 2), 6: ($spacer * 3), 7: ($spacer * 4.5)), $spacers);
+$spacers: map-merge( ( 0: 0, 1: ($spacer * .25), 2: ($spacer * 0.5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 2), 6: ($spacer * 3), 7: ($spacer * 4.5)), $spacers);
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -124,7 +124,8 @@ $line-height-lg: 1.5 !default;
 $line-height-sm: 1.5 !default;
 $border-width: 1px !default;
 $border-color: $gray-300 !default;
-$border-radius: .25rem !default;
+// $border-radius: .25rem !default;
+$border-radius:2px;
 $border-radius-lg: .3rem !default;
 $border-radius-sm: .2rem !default;
 $rounded-pill: 50rem !default;
@@ -608,8 +609,9 @@ $card-spacer-y: .75rem !default;
 $card-spacer-x: 1.25rem !default;
 $card-border-width: $border-width !default;
 $card-border-radius: $border-radius !default;
-$card-border-color: rgba($black,
-.125) !default;
+// $card-border-color: rgba($black,
+// .125) !default;
+$card-border-color:transpent;
 $card-inner-border-radius: subtract($card-border-radius,
 $card-border-width) !default;
 $card-cap-bg: rgba($black,

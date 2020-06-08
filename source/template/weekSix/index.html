@@ -24,7 +24,7 @@ current: index
         <div class="container">
             <nav class="navbar-header navbar-expand-lg navbar-light justify-content-between">
                 <button class="navbar-toggler justify-content-md-start" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
+                    <span class="navbar-toggler-icon" id="navbarToggleIcon">
                         {% include "menu-24px.svg" %}
                     </span>
                 </button>
@@ -55,7 +55,7 @@ current: index
             </nav>
         </div>
     </header>
-    <main class="container-fluid mainContent">
+    <main class="mainContent">
         <section>
             <div class="row justify-content-md-start align-items-center ">
                 <div class="container">
@@ -87,7 +87,7 @@ current: index
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <h4 class="mb-3">Special Clays</h4>
                             <p class="mb-4">A general body formulation for contemporary earthenware is 25% kaolin, 25% ball clay, 35% quartz and 15% feldspar.</p>
-                            <a href="#" class="green">learn more</a>
+                            <a href="#" class="green">Learn More</a>
                         </div>
                     </div>
 
@@ -95,13 +95,13 @@ current: index
                 <li>
                     <div class="row flex-row-reverse mb-4 md-3">
                         <div class="col-md-6 text-center mb-2 mb-md-4">
-                            <img src="{{ path.image_path}}week6/anne-nygard-sHyerRuFqT4-unsplash.jpg" alt="">
+                            <img src="{{ path.image_path}}week6/tom-crew-7HuTGlUfQSo-unsplash.jpg" alt="">
                         </div>
                         <div class="col-md-1"></div>
                         <div class="col-md-4 d-flex flex-column align-items-md-end justify-content-center">
                             <h4 class="mb-3">Less is more</h4>
                             <p class="mb-4 text-md-right">Trimming pottery can transform a weighty Earth-bound pot into one that is a pleasure to hold, look at, and use.</p>
-                            <a href="#" class="green">learn more</a>
+                            <a href="#" class="green">Learn More</a>
                         </div>
                     </div>
                 </li>
@@ -114,19 +114,79 @@ current: index
                         <div class="col-md-4 d-flex flex-column justify-content-center">
                             <h4 class="mb-3">Marvelous Detail</h4>
                             <p class="mb-4">In Craftsman, the art director, working with marketers, develops or creates an idea of a new creation.</p>
-                            <a href="#" class="green">learn more</a>
+                            <a href="#" class="green">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <div class="contactJumbotron">
+                <div class="backgroundImg d-flex align-items-md-center">
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <h2 class="slogan text-white col-10 col-md-4 mt-2">“I want to make the life more simple by crafts.”</h2>
+                            <div class="col-md-5"></div>
+                            <div class="actor col-10 col-md-2">
+                                <p class="title">Art Director</p>
+                                <h4 class="name text-white mb-3">Hsiao-Ming Chen</h4>
+                                <ul class="d-flex pl-0 mb-0">
+                                    <li class="mr-2"><a href="#" class="green">Instagram</a></li>
+                                    <li><a href="#" class="green">Twitter</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-
-                </li>
-            </ul>
-
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="slide container mt-md-7 mb-md-7 mt-6 mb-6 ">
+                <ul class="row flex-nowrap pl-0 mb-0">
+                    <li class="col-md-4 col-9">
+                        <div class="card">
+                            <div class="card-img-top mb-2" alt="Card image cap "></div>
+                            <div>
+                                <h4 class="mb-1">Tatami Cup</h4>
+                                <p class="mb-0">NT$1,080 <del>NT$1,200</del></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-4 col-9">
+                        <div class="card">
+                            <div class="card-img-top mb-2" alt="Card image cap "></div>
+                            <div>
+                                <h4 class="mb-1">Couple Collection</h4>
+                                <p class="mb-0">NT$2,800</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-4 col-9">
+                        <div class="card">
+                            <div class="card-img-top mb-2" alt="Card image cap "></div>
+                            <div>
+                                <h4 class="mb-1">Brotherhood Vase</h4>
+                                <p class="mb-0">NT$4,800</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-4 col-9">
+                        <div class="card">
+                            <div class="card-img-top mb-2" alt="Card image cap "></div>
+                            <div>
+                                <h4 class="mb-1">Brotherhood Vase</h4>
+                                <p class="mb-0">NT$4,800</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
-        <div class="footer-jumbotron d-block">
-            <div class="mask"></div>
+        <div class="footer-jumbotron d-block ">
+            <div class="mask "></div>
             <div class="container h-100 ">
                 <div class="row h-100 align-items-center ">
                     <div class="col-lg-5 col-sm-3 ">
@@ -169,6 +229,27 @@ current: index
             </div>
         </div>
     </footer>
+    <nav class="navMenu container pt-3 pb-3">
+        <div class="row">
+            <div class="col-10 d-flex testbor justify-content-between">
+                <div>
+                    {% include "arrow_back-24px.svg"%}
+                </div>
+                <div>
+                    {% include "local_grocery_store-24px.svg" %}
+                </div>
+            </div>
+
+        </div>
+        <div class="row"></div>
+        <div class="row"></div>
+    </nav>
+    <script>
+        $("#navbarToggleIcon").on("click", function(e) {
+            e.preventDefault();
+
+        });
+    </script>
 </body>
 
 </html>
