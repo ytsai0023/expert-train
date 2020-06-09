@@ -23,8 +23,8 @@ current: index
     <header>
         <div class="container">
             <nav class="navbar-header navbar-expand-lg navbar-light justify-content-between">
-                <button class="navbar-toggler justify-content-md-start" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" id="navbarToggleIcon">
+                <button id="navbarToggleIcon" class="navbar-toggler justify-content-md-start" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" >
                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
                     </span>
                 </button>
@@ -209,9 +209,6 @@ current: index
             <div class="container ">
                 <nav class="navbar-footer navbar-expand-lg navbar-dark2 ">
                     <a class="navbar-brand mark-dark " href="# ">Craftsman <span class="right ml-lg-3 ">© 2020. All Rights Reserved.</span> </a>
-                    <!-- <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarNav " aria-controls="navbarNav " aria-expanded="false " aria-label="Toggle navigation ">
-                      <span class="navbar-toggler-icon "></span>
-                    </button> -->
                     <div class="collapse navbar-collapse col-8 d-flex ">
                         <ul class="navbar-nav ">
                             <li class="nav-item ">
@@ -229,26 +226,63 @@ current: index
             </div>
         </div>
     </footer>
-    <nav class="navMenu container pt-3 pb-3">
-        <div class="row">
-            <div class="col-10 d-flex testbor justify-content-between">
-                <div>
+    <nav class="navMenu container pt-3 pb-3 d-md-none hide" id="navMenu">
+        <div class="row mb-3">
+            <div class="col-10 d-flex justify-content-between">
+                <button class="p-0" id="navbarHideIcon">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-                </div>
-                <div>
+                </button>
+                <a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                </div>
+                </a>
             </div>
 
         </div>
-        <div class="row"></div>
-        <div class="row"></div>
+        <div class="navLinksMenu row">
+            <ul class="mainMenu col-10">
+                <li class="d-flex justify-content-between">
+                    <a href="#" class="mb-3 mt-3 d-block">Product</a>
+                    <button class="p-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+                    </button>
+                </li>
+                <div class="subMenu">
+                    <ul class="p-0 pt-3">
+                        <li class="pb-3">
+                            <a href="">All<sup>24</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Bowl<sup>10</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Cup<sup>8</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Plate<sup>3</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Vase<sup>3</sup></a>
+                        </li>
+                    </ul>
+                </div>
+                <li><a href="#" class="mb-3 mt-3 d-block">Blog</a></li>
+                <li><a href="#" class="mb-3 mt-3 d-block">Contact</a></li>
+
+            </ul>
+
+        </div>
+
     </nav>
     <script>
         $("#navbarToggleIcon").on("click", function(e) {
             e.preventDefault();
+            $("#navMenu").toggleClass("hide").toggleClass("show");
 
         });
+        $("#navbarHideIcon").on("click", function(e) {
+            e.preventDefault();
+            $("#navMenu").toggleClass("show").toggleClass("hide");
+        })
     </script>
 </body>
 

@@ -23,8 +23,8 @@ current: index
     <header>
         <div class="container">
             <nav class="navbar-header navbar-expand-lg navbar-light justify-content-between">
-                <button class="navbar-toggler justify-content-md-start" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" id="navbarToggleIcon">
+                <button id="navbarToggleIcon" class="navbar-toggler justify-content-md-start" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" >
                         {% include "menu-24px.svg" %}
                     </span>
                 </button>
@@ -209,9 +209,6 @@ current: index
             <div class="container ">
                 <nav class="navbar-footer navbar-expand-lg navbar-dark2 ">
                     <a class="navbar-brand mark-dark " href="# ">Craftsman <span class="right ml-lg-3 ">© 2020. All Rights Reserved.</span> </a>
-                    <!-- <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarNav " aria-controls="navbarNav " aria-expanded="false " aria-label="Toggle navigation ">
-                      <span class="navbar-toggler-icon "></span>
-                    </button> -->
                     <div class="collapse navbar-collapse col-8 d-flex ">
                         <ul class="navbar-nav ">
                             <li class="nav-item ">
@@ -229,26 +226,63 @@ current: index
             </div>
         </div>
     </footer>
-    <nav class="navMenu container pt-3 pb-3">
-        <div class="row">
-            <div class="col-10 d-flex testbor justify-content-between">
-                <div>
+    <nav class="navMenu container pt-3 pb-3 d-md-none hide" id="navMenu">
+        <div class="row mb-3">
+            <div class="col-10 d-flex justify-content-between">
+                <button class="p-0" id="navbarHideIcon">
                     {% include "arrow_back-24px.svg"%}
-                </div>
-                <div>
+                </button>
+                <a href="#">
                     {% include "local_grocery_store-24px.svg" %}
-                </div>
+                </a>
             </div>
 
         </div>
-        <div class="row"></div>
-        <div class="row"></div>
+        <div class="navLinksMenu row">
+            <ul class="mainMenu col-10">
+                <li class="d-flex justify-content-between">
+                    <a href="#" class="mb-3 mt-3 d-block">Product</a>
+                    <button class="p-0">
+                        {% include "keyboard_arrow_up-24px.svg"%}
+                    </button>
+                </li>
+                <div class="subMenu">
+                    <ul class="p-0 pt-3">
+                        <li class="pb-3">
+                            <a href="">All<sup>24</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Bowl<sup>10</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Cup<sup>8</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Plate<sup>3</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Vase<sup>3</sup></a>
+                        </li>
+                    </ul>
+                </div>
+                <li><a href="#" class="mb-3 mt-3 d-block">Blog</a></li>
+                <li><a href="#" class="mb-3 mt-3 d-block">Contact</a></li>
+
+            </ul>
+
+        </div>
+
     </nav>
     <script>
         $("#navbarToggleIcon").on("click", function(e) {
             e.preventDefault();
+            $("#navMenu").toggleClass("hide").toggleClass("show");
 
         });
+        $("#navbarHideIcon").on("click", function(e) {
+            e.preventDefault();
+            $("#navMenu").toggleClass("show").toggleClass("hide");
+        })
     </script>
 </body>
 
