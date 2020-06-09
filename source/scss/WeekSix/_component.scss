@@ -1,298 +1,286 @@
-       header {
-           position: absolute;
-           top: 0;
-           left: 0;
-           z-index: 999;
-           width: 100vw;
-       }
-       
-       main {
-           position: relative;
-       }
-       
-       .footer-jumbotron {
-           display: block;
-           background-image:url("#{$image-path}tom-crew-uDF1mW7EUwM-unsplash.jpg");
-           background-size: cover;
-           background-repeat: no-repeat;
-           background-position: center;
-           padding-top: 5.25rem;
-           padding-bottom: 5.25rem;
-           color: white;
-           @media screen and (max-width: 768px) {
-               height: 224px;
-               position: relative;
-               padding-top: 0;
-               padding-bottom: 0;
-           }
-           .slogan {
-               font-size: 3rem;
-               line-height: 4rem;
-               font-family: "roboto";
-               font-weight: 600;
-               @media screen and (max-width: 768px) {
-                   font-size: 2rem;
-                   line-height: 3rem;
-                   font-weight: 500;
-                   margin-bottom: 1.5rem;
-               }
-           }
-       }
-       
-       .mask {
-           @media screen and (max-width: 768px) {
-               position: absolute;
-               bottom: 0;
-               top: 0;
-               height: 100%;
-               width: 100%;
-               background-color: #000;
-               opacity: 0.38;
-           }
-       }
-       
-       .subscribeBtn {
-           @media screen and (max-width: 768px) {
-               width: 7.5rem;
-               padding: 0;
-               margin: 0;
-               font-size: 1rem;
-               line-height: 1.5rem;
-           }
-       }
-       
-       footer {
-           background-color: black;
-       }
-       
-       @media only screen and (max-width: 768px) {
-           header,
-           footer {
-               background-color: #121212;
-           }
-       }
-       
-       .mark {
-           font-family: Raleway;
-           font-size: 1.5rem;
-           line-height: 1.8rem;
-           font-style: italic;
-           font-weight: 800;
-           @media only screen and (max-width: 768px) {
-               color: #fff !important;
-           }
-           padding-left:0 !important;
-           padding-right: 0 !important;
-       }
-       
-       .mark-dark {
-           @extend .mark;
-           color: #ffff;
-           background-color: #121212;
-       }
-       
-       .right {
-           font-size: 0.875rem;
-           line-height: 1rem;
-           font-weight: 200;
-           font-family: roboto;
-           font-style: normal;
-           color: #FFFFFF99;
-           @media only screen and (max-width: 768px) {
-               position: absolute;
-               bottom: 1.5rem;
-               left: 1rem;
-           }
-       }
-       
-       .mainContent {
-           position: relative;
-           .mainBackground {
-               background-image: url("#{$image-path}tom-crew-5HRCkrSs9Dk-unsplash.jpg");
-               position: absolute;
-               top: 0;
-               bottom: 0;
-               background-size: cover;
-               background-position: center center;
-               height: 50rem;
-               @media only screen and (max-width: 768px) {
-                   height: 40rem;
-               }
-           }
-           section:first-child .row:first-child {
-               height: 50rem;
-           }
-           @media only screen and (max-width: 768px) {
-               .justify-content-md-start {
-                   position: absolute;
-                   top: 0;
-                   left: 0;
-                   z-index: 100;
-               }
-               .justify-content-md-end {
-                   height: 640px;
-                   position: relative;
-                   top: 0;
-                   left: 0;
-                   // z-index: 50;
-               }
-           }
-       }
-       
-       .mainJumbotron {
-           padding: 0 !important;
-           .h1 {
-               line-height: 4rem;
-           }
-           .h4 {
-               font-weight: 300;
-               line-height: 2.25rem;
-               color: #0000009A;
-           }
-           @media only screen and (max-width: 768px) {
-               .h1 {
-                   color: $white;
-               }
-               .h4 {
-                   color: #FFFFFF99;
-                   margin-bottom: 6.75rem;
-               }
-               button {
-                   margin-bottom: 1.5rem !important;
-               }
-           }
-       }
-       
-       .propagandaList {
-           @media only screen and (max-width: 768px) {
-               margin-top: 3rem;
-           }
-           .row {
-               .col-md-6 {
-                   padding-left: 0 !important;
-                   padding-right: 0 !important;
-                   img {
-                       width: 95%;
-                       height: 400px;
-                       @media only screen and (max-width: 768px) {
-                           height: 245px;
-                       }
-                   }
-               }
-               .col-md-4 {
-                   p {
-                       font-weight: 300;
-                       color: #0000009A;
-                   }
-                   @media only screen and (max-width: 768px) {
-                       h4 {
-                           font-size: 1.5rem;
-                           font-weight: 600;
-                       }
-                   }
-               }
-           }
-       }
-       
-       .contactJumbotron {
-           position: relative;
-           .backgroundImg {
-               background-image: url("#{$image-path}burningparrot-u2Xn5Bzvllw-unsplash.jpg");
-               height: 400px;
-               background-size: cover;
-               background-repeat: no-repeat;
-               background-position: center;
-           }
-           .title {
-               margin-bottom: 0 !important;
-               color: #FFFFFF99;
-               font-weight: 300;
-           }
-           .name {
-               font-weight: 300;
-           }
-           ul {
-               font-weight: 500;
-           }
-           .actor {
-               @media only screen and (max-width: 768px) {
-                   position: absolute;
-                   bottom: 1.5rem;
-               }
-           }
-       }
-       
-       .slide {
-           .card-img-top {
-               height: 350px;
-               background-size: cover;
-               background-position: center;
-           }
-           del {
-               color: #00000062;
-           }
-           @media only screen and (max-width: 768px) {
-               .card-img-top {
-                   height: 240px;
-               }
-               overflow: hidden;
-           }
-           li:first-child {
-               .card-img-top {
-                   background-image: url("#{$image-path}tom-crew-XtyxEBiA8D8-unsplash.jpg");
-               }
-           }
-           li:nth-child(2) {
-               .card-img-top {
-                   background-image: url("#{$image-path}tom-crew-7HuTGlUfQSo-unsplash.jpg");
-               }
-           }
-           li:nth-child(3) {
-               .card-img-top {
-                   background-image: url("#{$image-path}tom-crew-8_ldgq801cE-unsplash.jpg");
-               }
-           }
-           li:nth-child(4) {
-               .card-img-top {
-                   background-image: url("#{$image-path}tom-crew-iUFS1GCpEbk-unsplash.jpg");
-               }
-           }
-       }
-       
-       .navMenu {
-           @media only screen and (max-width: 768px) {
-               position: fixed;
-               left: 0;
-               top: 0;
-               //    transform: translateX(-100%);
-               height: 100%;
-               width: 100%;
-               z-index: 999;
-               background-color: #fff;
-               .row {
-                   width: 500px;
-               }
-           }
-       }
-       
-       .navLinksMenu {
-           @media only screen and (max-width: 768px) {
-               a {
-                   font-size: 1.5rem;
-                   font-weight: 400;
-                   color: #121212;
-               }
-               .mainMenu {
-                   &>li {
-                       border-bottom: 1px solid #00000062;
-                   }
-               }
-               .subMenu {
-                   border-bottom: 1px solid #00000062;
-                   a {
-                       font-size: 1rem;
-                       color: #0000009A;
-                   }
-               }
-           }
-       }
+        .footer-jumbotron {
+            display: block;
+            background-image:url("#{$image-path}tom-crew-uDF1mW7EUwM-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-top: 5.25rem;
+            padding-bottom: 5.25rem;
+            color: white;
+            @media screen and (max-width: 768px) {
+                height: 224px;
+                position: relative;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .slogan {
+                font-size: 3rem;
+                line-height: 4rem;
+                font-family: "roboto";
+                font-weight: 600;
+                @media screen and (max-width: 768px) {
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    font-weight: 500;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+        
+        .mask {
+            @media screen and (max-width: 768px) {
+                position: absolute;
+                bottom: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background-color: #000;
+                opacity: 0.38;
+            }
+        }
+        
+        .subscribeBtn {
+            @media screen and (max-width: 768px) {
+                width: 7.5rem;
+                padding: 0;
+                margin: 0;
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+        }
+        
+        footer {
+            background-color: black;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            header,
+            footer {
+                background-color: #121212;
+            }
+        }
+        
+        .mark {
+            font-family: Raleway;
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            font-style: italic;
+            font-weight: 800;
+            @media only screen and (max-width: 768px) {
+                color: #fff !important;
+            }
+            padding-left:0 !important;
+            padding-right: 0 !important;
+        }
+        
+        .mark-dark {
+            @extend .mark;
+            color: #ffff;
+            background-color: #121212;
+        }
+        
+        .right {
+            font-size: 0.875rem;
+            line-height: 1rem;
+            font-weight: 200;
+            font-family: roboto;
+            font-style: normal;
+            color: #FFFFFF99;
+            @media only screen and (max-width: 768px) {
+                position: absolute;
+                bottom: 1.5rem;
+                left: 1rem;
+            }
+        }
+        
+        .mainContent {
+            position: relative;
+            .mainBackground {
+                background-image: url("#{$image-path}tom-crew-5HRCkrSs9Dk-unsplash.jpg");
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                background-size: cover;
+                background-position: center center;
+                height: 50rem;
+                @media only screen and (max-width: 768px) {
+                    height: 40rem;
+                }
+            }
+            section:first-child .row:first-child {
+                height: 50rem;
+            }
+            @media only screen and (max-width: 768px) {
+                .justify-content-md-start {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 100;
+                }
+                .justify-content-md-end {
+                    height: 640px;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    // z-index: 50;
+                }
+            }
+        }
+        
+        .mainJumbotron {
+            padding: 0 !important;
+            .h1 {
+                line-height: 4rem;
+            }
+            .h4 {
+                font-weight: 300;
+                line-height: 2.25rem;
+                color: #0000009A;
+            }
+            @media only screen and (max-width: 768px) {
+                .h1 {
+                    color: $white;
+                }
+                .h4 {
+                    color: #FFFFFF99;
+                    margin-bottom: 6.75rem;
+                }
+                button {
+                    margin-bottom: 1.5rem !important;
+                }
+            }
+        }
+        
+        .propagandaList {
+            @media only screen and (max-width: 768px) {
+                margin-top: 3rem;
+            }
+            .row {
+                .col-md-6 {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    img {
+                        width: 95%;
+                        height: 400px;
+                        @media only screen and (max-width: 768px) {
+                            height: 245px;
+                        }
+                    }
+                }
+                .col-md-4 {
+                    p {
+                        font-weight: 300;
+                        color: #0000009A;
+                    }
+                    @media only screen and (max-width: 768px) {
+                        h4 {
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .contactJumbotron {
+            position: relative;
+            .backgroundImg {
+                background-image: url("#{$image-path}burningparrot-u2Xn5Bzvllw-unsplash.jpg");
+                height: 400px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .title {
+                margin-bottom: 0 !important;
+                color: #FFFFFF99;
+                font-weight: 300;
+            }
+            .name {
+                font-weight: 300;
+            }
+            ul {
+                font-weight: 500;
+            }
+            .actor {
+                @media only screen and (max-width: 768px) {
+                    position: absolute;
+                    bottom: 1.5rem;
+                }
+            }
+        }
+        
+        .slide {
+            .card-img-top {
+                height: 350px;
+                background-size: cover;
+                background-position: center;
+            }
+            del {
+                color: #00000062;
+            }
+            @media only screen and (max-width: 768px) {
+                .card-img-top {
+                    height: 240px;
+                }
+                overflow: hidden;
+            }
+            li:first-child {
+                .card-img-top {
+                    background-image: url("#{$image-path}tom-crew-XtyxEBiA8D8-unsplash.jpg");
+                }
+            }
+            li:nth-child(2) {
+                .card-img-top {
+                    background-image: url("#{$image-path}tom-crew-7HuTGlUfQSo-unsplash.jpg");
+                }
+            }
+            li:nth-child(3) {
+                .card-img-top {
+                    background-image: url("#{$image-path}tom-crew-8_ldgq801cE-unsplash.jpg");
+                }
+            }
+            li:nth-child(4) {
+                .card-img-top {
+                    background-image: url("#{$image-path}tom-crew-iUFS1GCpEbk-unsplash.jpg");
+                }
+            }
+        }
+        
+        .navMenu {
+            @media only screen and (max-width: 768px) {
+                position: fixed;
+                left: 0;
+                top: 0;
+                //    transform: translateX(-100%);
+                height: 100%;
+                width: 100%;
+                z-index: 999;
+                background-color: #fff;
+                .row {
+                    width: 500px;
+                }
+            }
+        }
+        
+        .navLinksMenu {
+            @media only screen and (max-width: 768px) {
+                a {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    color: #121212;
+                }
+                .mainMenu {
+                    &>li {
+                        border-bottom: 1px solid #00000062;
+                    }
+                }
+                .subMenu {
+                    border-bottom: 1px solid #00000062;
+                    a {
+                        font-size: 1rem;
+                        color: #0000009A;
+                    }
+                }
+            }
+        }
