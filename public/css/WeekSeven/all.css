@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.about h1 {
+  margin-bottom: 40px; }
+
+.about img {
+  width: 384px;
+  height: 384px;
+  margin-bottom: 24px; }
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4px; }
+
+.profile li {
+  display: block;
+  margin-bottom: 8px; }
+
+hr {
+  font-weight: 384px;
+  height: 1px;
+  width: 384px;
+  display: block;
+  border-top: 1px solid #000; }
+
+.profile + hr {
+  margin-bottom: 32px; }
+
+.profile + hr + ul {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 56px; }
+
+.profile + hr + ul li::before {
+  content: "";
+  display: inline-block;
+  background-color: #891818;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-right: 16px; }
+
+.profile + hr + ul:last-child {
+  margin-bottom: 56px; }
+
+.myBrand {
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 64px; }
+
+.myBrand h1 {
+  margin-bottom: 16px; }
+
+.myBrand h5 {
+  margin-bottom: 32px; }
+
+.myBrand ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 132px;
+  margin-bottom: 48px; }
+
+.myBrand ul.work-pictures {
+  display: flex;
+  height: 875px;
+  width: 1300px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 160px; }
+
+.myBrand ul.work-pictures li {
+  margin-left: 24px; }
+
+.myBrand ul.work-pictures li:first-child {
+  margin-bottom: 40px; }
+
+.otherWorks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 64px; }
+
+.otherWorks {
+  height: 1920px;
+  background-image: url("../../src/images/week7/photo-1561291386-5be50364cfb5.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 1558px, cover; }
+
+.otherWorks h1 {
+  margin-bottom: 24px; }
+
+.otherWorks > p {
+  font-style: italic; }
+
+.otherWorks p:nth-of-type(2) {
+  margin-bottom: 48px; }
+
+.otherWorks ul {
+  width: 1200px;
+  color: #fff;
+  font-weight: 200; }
+
+.otherWorks ul > li > ul {
+  display: flex; }
+
+.otherWorks ul > li > ul li {
+  display: block;
+  /* justify-content: space-between; */
+  margin-right: 24px;
+  padding-bottom: 0; }
+
+.posters ul {
+  margin-bottom: 16px; }
+
+.posters p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 56px; }
+
+.posters ul li {
+  width: 384px;
+  height: 528px; }
+
+.photograph {
+  margin-bottom: 56px; }
+
+.photograph li p,
+.design li p {
+  text-align: center; }
+
+.contact {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 0; }
+
+.contact {
+  font-size: 24px;
+  line-height: 42px;
+  font-style: italic; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 42px; }
+
+main {
+  margin: 0 auto; }
+
+h1 {
+  font-size: 64px;
+  line-height: 75px;
+  font-weight: 500;
+  font-style: italic; }
+
+.font-rotobo-bold {
+  font-size: 24px;
+  line-height: 42px;
+  font-weight: 500;
+  font-style: italic; }
+
+.font-rotobo-medium {
+  font-size: 24px;
+  line-height: 42px;
+  font-weight: 400;
+  font-style: italic; }
+
+/* .font-rotobo-medium-small{
+    font-size: 20px;
+    line-height: 42px;
+    font-weight: 400;
+    font-style: italic;
+} */
+.jumbotron {
+  height: 958px;
+  background-image: url("../../src/images/week7/banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 64px;
+  background-color: transparent; }
+
+.jumbotron-content {
+  width: 308px; }
+
+.jumbotron h1 {
+  font-size: 80px;
+  line-height: 94px;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 32px; }
+
+.jumbotron p {
+  width: 283px;
+  text-align: justify;
+  margin: 0 auto;
+  margin-bottom: 48px; }
+
+.jumbotron ul {
+  display: flex;
+  justify-content: space-between; }
+
+.jumbotron a {
+  display: block;
+  cursor: pointer; }
+
+.behence {
+  background: url(../../src/images/week7/behance.svg);
+  width: 60px;
+  height: 60px; }
+
+.facebook {
+  background: url(../../src/images/week7/facebook.svg);
+  width: 60px;
+  height: 60px; }
+
+.instagram {
+  background: url(../../src/images/week7/instagram.svg);
+  width: 60px;
+  height: 60px; }
+
+.youtube {
+  background: url(../../src/images/week7/youtube.svg);
+  width: 60px;
+  height: 60px; }

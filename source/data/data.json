@@ -1,17 +1,17 @@
 {
-    "title":{
-      "week_three": "第三週",
-      "week_four": "第四週",
-      "test":"ba-ka"
+    "title": {
+        "week_three": "第三週",
+        "week_four": "第四週",
+        "test": "ba-ka"
     },
-    "path":{
-      "svg_path":"../src/images/",
-      "image_path":"../src/images/"
+    "path": {
+        "svg_path": "../src/images/",
+        "image_path": "../src/images/"
     },
-    "week5_data":{
-      "name1":"Emir Wicks",
-      "email1":"emir.wicks@mail.com"
+    "week5_data": {
+        "name1": "Emir Wicks",
+        "email1": "emir.wicks@mail.com"
     }
 
-  
+
 }

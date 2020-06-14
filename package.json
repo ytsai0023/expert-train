@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ytsai0023/hex-layout-train#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^4.5.0",
     "gulp-rename": "^2.0.0",
     "nunjucks": "^3.2.1"

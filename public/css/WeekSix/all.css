@@ -1,5 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif; }
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw; }
+
+main {
+  position: relative; }
+
+button,
+button:focus {
+  background-color: transparent;
+  border: none;
+  outline: none; }
+
+.btn {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+a.green {
+  color: #0E8A00; }
+
+@media screen and (max-width: 768px) {
+  .btn-fluid {
+    width: 90%; } }
+
+.show {
+  transform: translateX(0%);
+  transition: transform .4s; }
+
+.hide {
+  transform: translateX(-100%);
+  transition: transform .4s; }
+
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -8103,16 +8143,6 @@ a.text-green2:hover, a.text-green2:focus {
 li {
   list-style-type: none; }
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100vw; }
-
-main {
-  position: relative; }
-
 .footer-jumbotron {
   display: block;
   background-image: url("../../src/images/week6/tom-crew-uDF1mW7EUwM-unsplash.jpg");
@@ -8337,45 +8367,3 @@ footer {
     .navLinksMenu .subMenu a {
       font-size: 1rem;
       color: #0000009A; } }
-
-.testbor {
-  border: 1px solid #000; }
-
-.testbor2 {
-  border: 1px solid #fff; }
-
-.testbor3 {
-  border: 1px solid pink; }
-
-.padding-0 {
-  padding: 0; }
-
-body {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif; }
-
-button,
-button:focus {
-  background-color: transparent;
-  border: none;
-  outline: none; }
-
-.btn {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important; }
-
-a.green {
-  color: #0E8A00; }
-
-@media screen and (max-width: 768px) {
-  .btn-fluid {
-    width: 90%; } }
-
-.show {
-  transform: translateX(0%);
-  transition: transform .4s; }
-
-.hide {
-  transform: translateX(-100%);
-  transition: transform .4s; }
