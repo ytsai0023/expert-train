@@ -8320,31 +8320,27 @@ footer {
       position: absolute;
       bottom: 1.5rem; } }
 
-.slide .card-img-top {
-  height: 350px;
-  background-size: cover;
-  background-position: center; }
-
-.slide del {
-  color: #00000062; }
-
-@media only screen and (max-width: 768px) {
-  .slide {
-    overflow: hidden; }
-    .slide .card-img-top {
-      height: 240px; } }
-
-.slide li:first-child .card-img-top {
-  background-image: url("../../src/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg"); }
-
-.slide li:nth-child(2) .card-img-top {
-  background-image: url("../../src/images/week6/tom-crew-7HuTGlUfQSo-unsplash.jpg"); }
-
-.slide li:nth-child(3) .card-img-top {
-  background-image: url("../../src/images/week6/tom-crew-8_ldgq801cE-unsplash.jpg"); }
-
-.slide li:nth-child(4) .card-img-top {
-  background-image: url("../../src/images/week6/tom-crew-iUFS1GCpEbk-unsplash.jpg"); }
+.slide {
+  overflow: hidden; }
+  .slide .card-img-top {
+    height: 350px;
+    background-size: cover;
+    background-position: center; }
+  .slide del {
+    color: #00000062; }
+  @media only screen and (max-width: 768px) {
+    .slide {
+      overflow: hidden; }
+      .slide .card-img-top {
+        height: 240px; } }
+  .slide li:first-child .card-img-top {
+    background-image: url("../../src/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg"); }
+  .slide li:nth-child(2) .card-img-top {
+    background-image: url("../../src/images/week6/tom-crew-7HuTGlUfQSo-unsplash.jpg"); }
+  .slide li:nth-child(3) .card-img-top {
+    background-image: url("../../src/images/week6/tom-crew-8_ldgq801cE-unsplash.jpg"); }
+  .slide li:nth-child(4) .card-img-top {
+    background-image: url("../../src/images/week6/tom-crew-iUFS1GCpEbk-unsplash.jpg"); }
 
 @media only screen and (max-width: 768px) {
   .navMenu {

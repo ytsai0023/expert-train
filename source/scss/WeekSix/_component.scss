@@ -219,6 +219,7 @@
             del {
                 color: #00000062;
             }
+            overflow: hidden;
             @media only screen and (max-width: 768px) {
                 .card-img-top {
                     height: 240px;
