@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/WeekSix/all.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>第六週作業</title>
+</head>
+
+<body>
+    {% block header %} {% endblock %} {% block main %} {% endblock %}
+
+    <footer>
+        <div class="footer-jumbotron d-block ">
+            <div class="mask "></div>
+            <div class="container h-100 ">
+                <div class="row h-100 align-items-center ">
+                    <div class="col-lg-5 col-sm-3 ">
+                        <div class="jumbotron bg-transparent ">
+                            <div class="footerContent ">
+                                <h1 class="slogan mb-lg-5 mb-md-4 ">Subscribe for news and special offers!</h1>
+                                <div class="input-group w-lg-90 ">
+                                    <input type="text " class="form-control bg-transparent text-white " placeholder="Your email address ">
+                                    <div class="input-group-append ">
+                                        <button class="btn btn-green2 subscribeBtn " type="button ">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer bg-black2 text-white ">
+            <div class="container ">
+                <nav class="navbar-footer navbar-expand-lg navbar-dark2 ">
+                    <a class="navbar-brand mark-dark " href="# ">Craftsman <span class="right ml-lg-3 ">© 2020. All Rights Reserved.</span> </a>
+                    <div class="collapse navbar-collapse col-8 d-flex ">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item ">
+                                <a class="nav-link " href="# ">Purchase Policy</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="# ">Privacy Policy</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="# ">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <nav class="navMenu container pt-3 pb-3 d-md-none hide" id="navMenu">
+        <div class="row mb-3">
+            <div class="col-10 d-flex justify-content-between">
+                <button class="p-0" id="navbarHideIcon">
+                    {% include "arrow_back-24px.svg"%}
+                </button>
+                <a href="#">
+                    {% include "local_grocery_store-24px.svg" %}
+                </a>
+            </div>
+
+        </div>
+        <div class="navLinksMenu row">
+            <ul class="mainMenu col-10">
+                <li class="d-flex justify-content-between">
+                    <a href="#" class="mb-3 mt-3 d-block">Product</a>
+                    <button class="p-0">
+                        {% include "keyboard_arrow_up-24px.svg"%}
+                    </button>
+                </li>
+                <div class="subMenu">
+                    <ul class="p-0 pt-3">
+                        <li class="pb-3">
+                            <a href="">All<sup>24</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Bowl<sup>10</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Cup<sup>8</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Plate<sup>3</sup></a>
+                        </li>
+                        <li class="pb-3">
+                            <a href="">Vase<sup>3</sup></a>
+                        </li>
+                    </ul>
+                </div>
+                <li><a href="#" class="mb-3 mt-3 d-block">Blog</a></li>
+                <li><a href="#" class="mb-3 mt-3 d-block">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+    <script>
+        $("#navbarToggleIcon").on("click", function(e) {
+            e.preventDefault();
+            $("#navMenu").toggleClass("hide").toggleClass("show");
+
+        });
+        $("#navbarHideIcon").on("click", function(e) {
+            e.preventDefault();
+            $("#navMenu").toggleClass("show").toggleClass("hide");
+        })
+    </script>
+</body>
+
+</html>

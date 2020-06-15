@@ -8,53 +8,41 @@ const reload = browserSync.reload;
 const app_data = require('./source/data/data.json');
 
 
-gulp.task('sass',function(){
-    return watch('./source/scss/**/*.scss',function(){
-        gulp.src(['./source/scss/**/*.scss','./src/scss/**/_*.scss'])
-        .pipe(sass().on('error',sass.logError))
-        .pipe(gulp.dest('./public/css'))
-        .pipe(browserSync.stream())
+gulp.task('sass', function() {
+    return watch('./source/scss/**/*.scss', function() {
+        gulp.src(['./source/scss/**/*.scss', './src/scss/**/_*.scss'])
+            .pipe(sass().on('error', sass.logError))
+            .pipe(gulp.dest('./public/css'))
+            .pipe(browserSync.stream())
     })
 })
 
-gulp.task('nunjucks',function(){
-   
-   return  watch(['./source/template/**/*.html'],function(){
-    gulp.src('./source/template/**/*.html')
-    .pipe(data(function(){
-        return app_data
-        //return JSON.stringify(app_data);
-    }))
-    .pipe(nunjucksRender({
-        path: [
-            './source/template/weekThree/'
-            ,'./source/template/weekFour/'
-            ,'./source/template/weekFive/'
-            ,'./source/template/weekFive/material/'
-            ,'./source/template/weekSix/asset/'
-            ,'./source/templates/_layout-w4.html'
-            ,'./source/templates/_layout-w5.html'
-            , './source/template/component/'
-        ],
-        watch: true
-      }))
-    .pipe(gulp.dest('./public'))
-    .pipe(browserSync.stream())
+gulp.task('nunjucks', function() {
+
+    return watch(['./source/template/**/*.html'], function() {
+        gulp.src('./source/template/**/*.html')
+            .pipe(data(function() {
+                return app_data
+                    //return JSON.stringify(app_data);
+            }))
+            .pipe(nunjucksRender({
+                path: [
+                    './source/template/weekThree/', './source/template/weekFour/', './source/template/weekFive/', './source/template/weekFive/material/', './source/template/weekSix/asset/', './source/templates/_layout-w4.html', './source/templates/_layout-w5.html', './source/templates/_layout-w6.html', './source/template/component/'
+                ],
+                watch: true
+            }))
+            .pipe(gulp.dest('./public'))
+            .pipe(browserSync.stream())
     })
-    
+
 })
 
-gulp.task('browser-sync',function (){
+gulp.task('browser-sync', function() {
     browserSync.init({
-        server:'./public',
-        notify:true,
-        open:true
+        server: './public',
+        notify: true,
+        open: true
     })
 })
 
-gulp.task('default',gulp.parallel('sass','nunjucks','browser-sync'))
-
-
-
-
-
+gulp.task('default', gulp.parallel('sass', 'nunjucks', 'browser-sync'))
